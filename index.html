@@ -1,10 +1,1205 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Arbore</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arbore — Imaginez votre jardin avant même de planter</title>
+  <meta name="description" content="Arbore est une application qui vous aide à choisir vos plantes, les placer en 3D et suivre leur entretien au quotidien." />
+  <meta name="keywords" content="Arbore, jardin, plantes, application plantes, jardinage, IA, 3D, réalité augmentée, entretien plantes" />
+  <meta name="author" content="Arbore" />
+
+  <meta property="og:title" content="Arbore — Imaginez votre jardin avant même de planter" />
+  <meta property="og:description" content="Choisissez vos plantes, visualisez votre jardin en 3D et suivez les bons conseils d’entretien." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arbore.app" />
+  <meta property="og:image" content="https://arbore.app/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #123d2a;
+      --forest-2: #194d36;
+      --green: #2f8f46;
+      --mint: #c9f4df;
+      --mint-soft: #ecfff5;
+      --cream: #f7f3ec;
+      --paper: #fffdf8;
+      --text: #173326;
+      --muted: #65756d;
+      --line: rgba(18, 61, 42, 0.12);
+      --shadow: 0 24px 70px rgba(18, 61, 42, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 243, 236, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--forest);
+      font-size: 1.35rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--forest);
+      color: var(--paper);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(18, 61, 42, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--forest);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--forest);
+      color: white;
+      box-shadow: 0 16px 40px rgba(18, 61, 42, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: #0f3323;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: var(--line);
+      color: var(--forest);
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      box-shadow: 0 12px 26px rgba(18, 61, 42, 0.08);
+    }
+
+    .hero {
+      position: relative;
+      padding: 94px 0 64px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -180px -160px auto auto;
+      width: 520px;
+      height: 520px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(201, 244, 223, 0.9), rgba(201, 244, 223, 0));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--mint-soft);
+      border: 1px solid rgba(47, 143, 70, 0.16);
+      color: var(--forest);
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(47, 143, 70, 0.12);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+      color: var(--forest);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .phone-stage {
+      position: relative;
+      min-height: 600px;
+      display: grid;
+      place-items: center;
+    }
+
+    .blob {
+      position: absolute;
+      width: 410px;
+      height: 410px;
+      border-radius: 44% 56% 60% 40%;
+      background: linear-gradient(135deg, var(--mint), rgba(255, 255, 255, 0.65));
+      filter: drop-shadow(0 28px 70px rgba(18, 61, 42, 0.16));
+      animation: morph 9s ease-in-out infinite;
+    }
+
+    @keyframes morph {
+      0%, 100% { border-radius: 44% 56% 60% 40%; transform: rotate(0deg); }
+      50% { border-radius: 60% 40% 42% 58%; transform: rotate(5deg); }
+    }
+
+    .phone {
+      position: relative;
+      width: 290px;
+      height: 590px;
+      background: #101f17;
+      border-radius: 46px;
+      padding: 14px;
+      box-shadow: var(--shadow), inset 0 0 0 1px rgba(255,255,255,0.18);
+      transform: rotate(-7deg);
+    }
+
+    .phone-screen {
+      height: 100%;
+      border-radius: 34px;
+      background: linear-gradient(180deg, #f9fff9, #eaf8ef);
+      overflow: hidden;
+      padding: 18px;
+      position: relative;
+    }
+
+    .phone-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--forest);
+    }
+
+    .mini-map {
+      height: 210px;
+      border-radius: 26px;
+      background:
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+        repeating-linear-gradient(90deg, rgba(18,61,42,0.08) 0 1px, transparent 1px 48px),
+        repeating-linear-gradient(0deg, rgba(18,61,42,0.08) 0 1px, transparent 1px 48px),
+        linear-gradient(135deg, #bdebc7, #f4d9bd);
+      position: relative;
+      border: 1px solid rgba(18, 61, 42, 0.12);
+      margin-bottom: 18px;
+    }
+
+    .plant-dot {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: white;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 22px rgba(18, 61, 42, 0.12);
+      font-size: 1.25rem;
+    }
+
+    .dot-1 { top: 26px; left: 36px; }
+    .dot-2 { top: 92px; right: 40px; }
+    .dot-3 { bottom: 24px; left: 92px; }
+
+    .app-card {
+      background: white;
+      border-radius: 22px;
+      padding: 15px;
+      border: 1px solid rgba(18, 61, 42, 0.08);
+      margin-bottom: 12px;
+      box-shadow: 0 12px 32px rgba(18, 61, 42, 0.08);
+    }
+
+    .app-card h3 {
+      font-size: 0.95rem;
+      color: var(--forest);
+      margin-bottom: 6px;
+    }
+
+    .app-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(18, 61, 42, 0.12);
+      border-radius: 20px;
+      padding: 15px 17px;
+      box-shadow: 0 20px 50px rgba(18, 61, 42, 0.12);
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .floating-card span {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.78rem;
+      margin-top: 4px;
+    }
+
+    .float-1 { top: 80px; left: 18px; }
+    .float-2 { right: 0; bottom: 105px; }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      color: var(--forest);
+      margin-bottom: 16px;
+    }
+
+    .section-header p,
+    .large-text {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .problem-grid,
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(18, 61, 42, 0.06);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--mint-soft);
+      color: var(--forest);
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--forest);
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.98rem;
+    }
+
+    .solution {
+      background: var(--forest);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .solution::before {
+      content: "";
+      position: absolute;
+      inset: -180px auto auto -140px;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background: rgba(201, 244, 223, 0.16);
+    }
+
+    .solution-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .solution h2,
+    .solution .section-label {
+      color: white;
+    }
+
+    .solution p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px;
+      border-radius: 22px;
+    }
+
+    .step-number {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: var(--mint);
+      color: var(--forest);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .download-card {
+      border-radius: var(--radius-xl);
+      padding: 34px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .download-card.green {
+      background: linear-gradient(135deg, var(--forest), var(--forest-2));
+      color: white;
+    }
+
+    .download-card.green p {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .qr-placeholder {
+      width: 170px;
+      height: 170px;
+      border-radius: 24px;
+      background:
+        linear-gradient(90deg, rgba(18,61,42,0.12) 1px, transparent 1px),
+        linear-gradient(rgba(18,61,42,0.12) 1px, transparent 1px),
+        #fff;
+      background-size: 18px 18px;
+      border: 1px dashed rgba(18, 61, 42, 0.28);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 0.84rem;
+      padding: 18px;
+      margin-top: 26px;
+    }
+
+    .store-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .store-badge {
+      height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      background: #0f1712;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .web-preview {
+      margin-top: 26px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .web-bar {
+      display: flex;
+      gap: 7px;
+      padding: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .web-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.38);
+    }
+
+    .web-body {
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .web-line {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.24);
+    }
+
+    .web-line.short { width: 55%; }
+    .web-line.medium { width: 78%; }
+
+    .community {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .social-card {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(18, 61, 42, 0.08);
+    }
+
+    .social-icon {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      max-width: 860px;
+    }
+
+    details {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--forest);
+      font-weight: 800;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--green);
+      font-size: 1.2rem;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 14px;
+    }
+
+    .final-cta {
+      padding: 82px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--forest), #0c281c);
+      border-radius: 34px;
+      padding: 54px;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-box::after {
+      content: "🌿";
+      position: absolute;
+      right: 44px;
+      bottom: -32px;
+      font-size: 9rem;
+      opacity: 0.08;
+    }
+
+    .cta-box h2 {
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--forest);
+    }
+
+    .replace-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 940px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .solution-grid,
+      .download-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .phone-stage {
+        min-height: 520px;
+      }
+
+      .problem-grid,
+      .features-grid,
+      .feature-grid-4,
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-box {
+        padding: 38px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 68px;
+      }
+
+      .nav-cta .btn-secondary {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .hero-actions,
+      .store-badges {
+        flex-direction: column;
+      }
+
+      .btn,
+      .store-badge {
+        width: 100%;
+      }
+
+      .phone {
+        width: 245px;
+        height: 500px;
+      }
+
+      .blob {
+        width: 310px;
+        height: 310px;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      section {
+        padding: 66px 0;
+      }
+
+      .problem-grid,
+      .features-grid,
+      .feature-grid-4,
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .download-card {
+        min-height: auto;
+        padding: 26px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>🌿 Arbore</h1>
-  <p>L’app qui t’aide à placer parfaitement tes plantes.</p>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Arbore accueil">
+        <span class="logo-mark">A</span>
+        <span>Arbore</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#probleme">Problème</a>
+        <a href="#solution">Solution</a>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#app">Apps</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-secondary" href="#communaute">Réseaux</a>
+        <a class="btn btn-primary" href="#app">Essayer Arbore</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> grow with harmony</div>
+          <h1>Imaginez votre jardin avant même de planter.</h1>
+          <p>
+            Arbore vous aide à choisir les bonnes plantes, à les placer en 3D dans votre espace
+            et à suivre leur entretien au quotidien.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#app-mobile">Télécharger l’app mobile</a>
+            <a class="btn btn-secondary" href="#app-web">Ouvrir l’app web</a>
+          </div>
+
+          <div class="trust-row">
+            <span class="trust-pill">🌱 Recommandations intelligentes</span>
+            <span class="trust-pill">📱 Mobile & Web</span>
+            <span class="trust-pill">🧠 IA & 3D</span>
+          </div>
+        </div>
+
+        <div class="phone-stage" aria-label="Aperçu de l'application Arbore">
+          <div class="blob"></div>
+          <div class="floating-card float-1">Scan intelligent<span>Analyse de votre espace</span></div>
+          <div class="floating-card float-2">Conseils personnalisés<span>Entretien adapté</span></div>
+
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-top">
+                <span>Arbore</span>
+                <span>🌿</span>
+              </div>
+              <div class="mini-map">
+                <span class="plant-dot dot-1">🪴</span>
+                <span class="plant-dot dot-2">🌵</span>
+                <span class="plant-dot dot-3">🌱</span>
+              </div>
+              <div class="app-card">
+                <h3>Jardin principal</h3>
+                <p>3 plantes recommandées selon la lumière, l’espace et l’entretien souhaité.</p>
+              </div>
+              <div class="app-card">
+                <h3>À faire aujourd’hui</h3>
+                <p>Arroser le pothos et vérifier l’exposition de votre monstera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="probleme">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Le problème</div>
+          <h2>Les plantes donnent envie. Leur entretien, beaucoup moins.</h2>
+          <p>
+            Beaucoup de personnes veulent un bel espace vert, mais se retrouvent bloquées dès le départ :
+            choix des plantes, emplacement, lumière, arrosage, entretien… tout devient vite flou.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="card">
+            <div class="card-icon">🌿</div>
+            <h3>Quelles plantes choisir ?</h3>
+            <p>Sans guidance, on choisit souvent des plantes qui ne sont pas adaptées à son environnement.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📍</div>
+            <h3>Où les placer ?</h3>
+            <p>Lumière, espace, humidité : le bon emplacement change tout pour la santé d’une plante.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💧</div>
+            <h3>Comment les entretenir ?</h3>
+            <p>Arrosage, rappels, conseils : sans suivi, les plantes sont vite oubliées ou mal entretenues.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="solution">
+      <div class="container solution-grid">
+        <div>
+          <div class="section-label">La solution</div>
+          <h2>Arbore transforme le jardinage en expérience guidée.</h2>
+          <p class="large-text">
+            De l’idée à l’entretien, Arbore vous accompagne avec une approche simple : visualiser,
+            comprendre, puis agir avec les bons conseils.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Scannez votre jardin</h3>
+              <p>Analysez votre espace pour mieux comprendre les possibilités d’aménagement.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Visualisez en 3D</h3>
+              <p>Placez vos plantes et projetez le rendu avant de passer à l’action.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Suivez les conseils</h3>
+              <p>Recevez des recommandations pour prendre soin de vos plantes au quotidien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fonctionnalites">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Fonctionnalités</div>
+          <h2>Tout ce qu’il faut pour créer un jardin qui vous ressemble.</h2>
+          <p>
+            Arbore réunit visualisation, intelligence et suivi dans une seule expérience simple à utiliser.
+          </p>
+        </div>
+
+        <div class="feature-grid-4">
+          <article class="card">
+            <div class="card-icon">🧊</div>
+            <h3>Visualisation 3D</h3>
+            <p>Voyez vos plantes dans votre espace avant même de les acheter ou de les planter.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Recommandations IA</h3>
+            <p>Obtenez des suggestions adaptées à votre environnement et à vos envies.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📅</div>
+            <h3>Suivi d’entretien</h3>
+            <p>Gardez le rythme avec des rappels et des conseils pour chaque plante.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✨</div>
+            <h3>Génération de plantes</h3>
+            <p>Imaginez de nouvelles compositions et explorez différents styles de jardin.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="app">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Accéder à Arbore</div>
+          <h2>Disponible sur mobile et sur le web.</h2>
+          <p>
+            Préparez votre jardin depuis votre téléphone, puis retrouvez votre espace depuis votre navigateur.
+          </p>
+        </div>
+
+        <div class="download-grid">
+          <article class="download-card" id="app-mobile">
+            <div>
+              <div class="section-label">Application mobile</div>
+              <h2>Téléchargez Arbore sur mobile.</h2>
+              <p class="large-text">
+                Scannez le QR code pour accéder à l’application mobile.
+              </p>
+              <div class="qr-placeholder">
+                QR CODE À AJOUTER<br />quand le lien App Store est prêt
+              </div>
+              <span class="replace-note">⚠️ Remplacer ce bloc par le vrai QR code.</span>
+            </div>
+            <div class="store-badges">
+              <a class="store-badge" href="#" aria-label="Lien App Store à ajouter"> App Store bientôt</a>
+              <a class="store-badge" href="#" aria-label="Lien TestFlight à ajouter">🧪 TestFlight bientôt</a>
+            </div>
+          </article>
+
+          <article class="download-card green" id="app-web">
+            <div>
+              <div class="section-label">Application web</div>
+              <h2>Gérez vos jardins depuis le web.</h2>
+              <p class="large-text">
+                Accédez à votre espace, consultez vos recommandations et suivez vos plantes depuis votre navigateur.
+              </p>
+              <div class="web-preview" aria-hidden="true">
+                <div class="web-bar">
+                  <span class="web-dot"></span>
+                  <span class="web-dot"></span>
+                  <span class="web-dot"></span>
+                </div>
+                <div class="web-body">
+                  <div class="web-line short"></div>
+                  <div class="web-line medium"></div>
+                  <div class="web-line"></div>
+                  <div class="web-line medium"></div>
+                </div>
+              </div>
+            </div>
+            <div class="store-badges">
+              <a class="btn btn-secondary" href="#">Lien app web à ajouter</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="communaute" class="community">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Communauté</div>
+          <h2>Suivez l’aventure Arbore.</h2>
+          <p>
+            Retrouvez les coulisses du projet, les nouveautés, les démos et les prochaines annonces sur nos réseaux.
+          </p>
+        </div>
+
+        <div class="social-grid">
+          <a class="social-card" href="#" aria-label="Lien TikTok à ajouter">
+            <div class="social-icon">🎵</div>
+            <h3>TikTok</h3>
+            <p>Démos courtes, avant/après et évolution du projet.</p>
+          </a>
+          <a class="social-card" href="#" aria-label="Lien Instagram à ajouter">
+            <div class="social-icon">📸</div>
+            <h3>Instagram</h3>
+            <p>Inspiration jardin, visuels de l’app et nouveautés.</p>
+          </a>
+          <a class="social-card" href="#" aria-label="Lien Discord à ajouter">
+            <div class="social-icon">💬</div>
+            <h3>Discord</h3>
+            <p>Rejoignez la communauté et partagez vos retours.</p>
+          </a>
+          <a class="social-card" href="#" aria-label="Lien LinkedIn à ajouter">
+            <div class="social-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>Suivez l’avancement professionnel du projet.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">FAQ</div>
+          <h2>Questions fréquentes.</h2>
+          <p>Une section utile pour rassurer les visiteurs et améliorer le référencement du site.</p>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>Arbore est-elle gratuite ?</summary>
+            <p>Arbore proposera un accès gratuit pour découvrir le produit. Certaines fonctionnalités avancées pourront être disponibles dans une version premium.</p>
+          </details>
+          <details>
+            <summary>L’application est-elle disponible sur mobile ?</summary>
+            <p>Oui, Arbore est pensée pour une utilisation mobile. Le lien de téléchargement sera ajouté dès que l’application sera disponible.</p>
+          </details>
+          <details>
+            <summary>Puis-je utiliser Arbore depuis le web ?</summary>
+            <p>Oui, une plateforme web permettra de retrouver son espace, gérer ses jardins et consulter ses recommandations.</p>
+          </details>
+          <details>
+            <summary>Arbore fonctionne-t-elle pour les plantes d’intérieur ?</summary>
+            <p>Arbore peut être adaptée aux espaces intérieurs et extérieurs, selon les plantes disponibles et les informations renseignées.</p>
+          </details>
+          <details>
+            <summary>Comment sont générées les recommandations ?</summary>
+            <p>Les recommandations prennent en compte l’environnement, les besoins des plantes et les préférences de l’utilisateur pour proposer des choix plus adaptés.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Prêt à créer un jardin qui vous ressemble ?</h2>
+            <p>
+              Découvrez Arbore et transformez le jardinage en une expérience simple, visuelle et guidée.
+            </p>
+          </div>
+          <a class="btn btn-secondary" href="#app">Essayer Arbore</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="logo-mark">A</span>
+        <span>Arbore</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:contactus@arbore.app">contactus@arbore.app</a>
+        <a href="#">Mentions légales à ajouter</a>
+        <a href="#communaute">Réseaux</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
