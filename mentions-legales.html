@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales — Arbore</title>
+  <meta name="description" content="Mentions légales, politique de confidentialité et conditions générales d'Arbore." />
+  <meta name="author" content="Arbore" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #123d2a;
+      --forest-2: #194d36;
+      --green: #2f8f46;
+      --mint: #c9f4df;
+      --mint-soft: #ecfff5;
+      --cream: #f7f3ec;
+      --paper: #fffdf8;
+      --text: #173326;
+      --muted: #65756d;
+      --line: rgba(18, 61, 42, 0.12);
+      --shadow: 0 24px 70px rgba(18, 61, 42, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 243, 236, 0.84);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--forest);
+      font-size: 1.35rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--forest);
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 12px 30px rgba(18, 61, 42, 0.22);
+    }
+
+    .nav-links,
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: var(--forest);
+    }
+
+    .hero {
+      padding: 78px 0 48px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      max-width: 820px;
+      color: var(--forest);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.75;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .quick-links a,
+    .legal-contact,
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 999px;
+      padding: 12px 18px;
+      background: white;
+      border: 1px solid var(--line);
+      color: var(--forest);
+      font-weight: 800;
+      box-shadow: 0 12px 26px rgba(18, 61, 42, 0.06);
+    }
+
+    .download-link {
+      background: var(--mint-soft);
+      border-color: rgba(47, 143, 70, 0.18);
+    }
+
+    .download-link:hover {
+      background: var(--mint);
+    }
+
+    .legal-page {
+      padding: 32px 0 86px;
+    }
+
+    .legal-document {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      margin-bottom: 26px;
+    }
+
+    .legal-header {
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+    }
+
+    .legal-header h2 {
+      color: var(--forest);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .legal-header p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 760px;
+    }
+
+    .legal-date {
+      display: inline-flex;
+      margin-top: 14px;
+      color: var(--forest);
+      background: var(--mint-soft);
+      border: 1px solid rgba(47, 143, 70, 0.16);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .legal-block {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .legal-block h3 {
+      color: var(--forest);
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .legal-block ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .legal-block li {
+      position: relative;
+      padding-left: 17px;
+      color: var(--muted);
+      line-height: 1.62;
+      font-size: 0.95rem;
+    }
+
+    .legal-block li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .legal-footer-note {
+      background: linear-gradient(135deg, var(--forest), var(--forest-2));
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .legal-footer-note h3 {
+      font-size: 1.02rem;
+      margin-bottom: 8px;
+    }
+
+    .legal-footer-note p {
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.65;
+    }
+
+    footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .nav-inner {
+        height: auto;
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .legal-document {
+        padding: 24px;
+      }
+
+      .legal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Arbore accueil">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation légale">
+        <a href="index.html">Accueil</a>
+        <a href="#confidentialite">Confidentialité</a>
+        <a href="#conditions">Conditions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="section-label">Mentions légales</div>
+        <h1>Les informations légales d’Arbore.</h1>
+        <p>
+          Cette page reprend les textes affichés dans l’application : politique de confidentialité
+          et conditions générales, avec la même date de mise à jour.
+        </p>
+        <div class="quick-links" aria-label="Accès rapide">
+          <a href="#confidentialite">Politique de confidentialité</a>
+          <a href="#conditions">Conditions générales</a>
+          <a class="download-link" href="documents/politique-confidentialite-arbore.txt" download>Télécharger la politique</a>
+          <a class="download-link" href="documents/conditions-generales-arbore.txt" download>Télécharger les conditions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-page">
+      <div class="container">
+        <article class="legal-document" id="confidentialite">
+          <div class="legal-header">
+            <div class="section-label">Politique de confidentialité</div>
+            <h2>Arbore respecte ta vie privée.</h2>
+            <p>
+              Cette politique explique quelles données nous collectons, comment nous les utilisons
+              et les choix dont tu disposes.
+            </p>
+            <span class="legal-date">Dernière mise à jour : 11 Nov 2025</span>
+            <div class="quick-links">
+              <a class="download-link" href="documents/politique-confidentialite-arbore.txt" download>Télécharger la politique</a>
+            </div>
+          </div>
+
+          <div class="legal-grid">
+            <section class="legal-block">
+              <h3>Données que nous collectons</h3>
+              <ul>
+                <li>Identité : nom, adresse e-mail, identifiant Firebase.</li>
+                <li>Utilisation : scans de plantes, préférences d’affichage, interactions dans l’app.</li>
+                <li>Appareil &amp; diagnostics : version de l’app, modèle d’appareil, journaux de crash.</li>
+                <li>Contenu utilisateur : photos/visuels importés pour l’identification.</li>
+                <li>Achats : historiques d’abonnement (via App Store / Play Store).</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Pourquoi nous utilisons ces données</h3>
+              <ul>
+                <li>Fournir les fonctionnalités principales de Arbore (scans, recommandations, sauvegardes).</li>
+                <li>Personnaliser ton expérience (styles, notifications météo, conseils).</li>
+                <li>Améliorer la qualité (analyses d’usage, correction de bugs, sécurité).</li>
+                <li>Gérer l’abonnement et l’assistance client.</li>
+                <li>Respecter nos obligations légales.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Base légale (RGPD)</h3>
+              <ul>
+                <li>Exécution du contrat : fournir l’app et ses services.</li>
+                <li>Intérêts légitimes : améliorer et sécuriser Arbore.</li>
+                <li>Consentement : notifications, accès caméra/photos.</li>
+                <li>Obligation légale : conservation liée à la facturation.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Conservation</h3>
+              <ul>
+                <li>Nous conservons tes données uniquement le temps nécessaire pour fournir le service.</li>
+                <li>Tu peux supprimer ton compte depuis ton profil ; les données associées sont alors supprimées ou anonymisées, sauf obligation légale de conservation.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Partage &amp; destinataires</h3>
+              <ul>
+                <li>Fournisseurs techniques : hébergement, analytics, rapports de crash.</li>
+                <li>Paiements &amp; abonnements : App Store / Play Store.</li>
+                <li>Nous ne vendons pas tes données. Les transferts sont limités au nécessaire et encadrés par contrat.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Tes droits</h3>
+              <ul>
+                <li>Accès, rectification, portabilité, effacement.</li>
+                <li>Opposition et limitation dans les cas prévus par la loi.</li>
+                <li>Retrait du consentement (ex : notifications) à tout moment.</li>
+                <li>Pour exercer tes droits, contacte-nous à : support@arbore.app.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Sécurité</h3>
+              <ul>
+                <li>Chiffrement en transit (HTTPS) et bonnes pratiques de sécurité.</li>
+                <li>Accès restreint aux seules personnes habilitées.</li>
+                <li>Sur mobile, protège ton appareil (code, Face/Touch ID).</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Enfants</h3>
+              <ul>
+                <li>Arbore ne vise pas les personnes de moins de 13 ans (ou l’âge légal local).</li>
+                <li>Si une collecte inappropriée nous est signalée, nous supprimerons les données concernées.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Transferts internationaux</h3>
+              <ul>
+                <li>Lorsque des données sont traitées hors UE/EEE, nous appliquons des garanties appropriées (clauses types, mesures complémentaires) conformément au RGPD.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Nous contacter</h3>
+              <ul>
+                <li>Pour toute question, demande d’accès ou suppression de données, écris-nous.</li>
+              </ul>
+              <a class="legal-contact" href="mailto:support@arbore.app">support@arbore.app</a>
+            </section>
+          </div>
+
+          <div class="legal-footer-note">
+            <h3>Modifications de cette politique</h3>
+            <p>
+              Nous pouvons mettre à jour cette politique pour refléter l’évolution de nos pratiques.
+              Toute modification importante sera indiquée dans l’app.
+            </p>
+          </div>
+        </article>
+
+        <article class="legal-document" id="conditions">
+          <div class="legal-header">
+            <div class="section-label">Conditions générales</div>
+            <h2>Conditions d’utilisation</h2>
+            <p>
+              Merci d’utiliser Arbore. Merci de lire attentivement ces Conditions : elles encadrent
+              ton accès à l’app et son utilisation.
+            </p>
+            <span class="legal-date">Dernière mise à jour : 11 Nov 2025</span>
+            <div class="quick-links">
+              <a class="download-link" href="documents/conditions-generales-arbore.txt" download>Télécharger les conditions</a>
+            </div>
+          </div>
+
+          <div class="legal-grid">
+            <section class="legal-block">
+              <h3>Acceptation des conditions</h3>
+              <ul>
+                <li>En créant un compte ou en utilisant Arbore, tu acceptes les présentes Conditions.</li>
+                <li>Si tu n’acceptes pas ces Conditions, tu ne dois pas utiliser l’app.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Description du service</h3>
+              <ul>
+                <li>Arbore fournit des fonctionnalités liées au jardinage : scans de plantes, recommandations, visualisations, notifications et synchronisation.</li>
+                <li>Certaines fonctionnalités sont payantes et accessibles via des abonnements.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Comptes &amp; sécurité</h3>
+              <ul>
+                <li>Tu es responsable de l’exactitude des informations de ton compte et de la confidentialité de tes identifiants.</li>
+                <li>Préviens-nous immédiatement en cas d’usage non autorisé de ton compte.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Abonnements &amp; facturation</h3>
+              <ul>
+                <li>Les achats sont gérés par l’App Store / Play Store ; leurs conditions s’appliquent.</li>
+                <li>Les abonnements se renouvellent automatiquement jusqu’à annulation.</li>
+                <li>Les tarifs peuvent évoluer ; nous t’informerons des changements applicables.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Essais gratuits &amp; annulation</h3>
+              <ul>
+                <li>Les essais gratuits, lorsqu’ils sont proposés, se transforment en abonnement payant à la fin de la période, sauf annulation avant l’échéance.</li>
+                <li>Tu peux annuler ton abonnement à tout moment depuis les réglages de l’App Store / Play Store.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Contenu utilisateur</h3>
+              <ul>
+                <li>Tu conserves tes droits sur les photos et contenus que tu importes.</li>
+                <li>Tu nous accordes une licence mondiale, non exclusive et révocable pour héberger, traiter et afficher ce contenu uniquement afin de fournir le service.</li>
+                <li>Tu garantis disposer des droits nécessaires pour partager ces contenus.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Usages interdits</h3>
+              <ul>
+                <li>Ingénierie inverse, contournement des mesures de sécurité, usage frauduleux ou illégal.</li>
+                <li>Interférence avec le service, surcharge des serveurs, collecte automatisée non autorisée.</li>
+                <li>Publication de contenus illégaux, offensants, diffamatoires ou portant atteinte aux droits d’autrui.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Propriété intellectuelle</h3>
+              <ul>
+                <li>Le nom Arbore, son logo, l’app et son contenu (hors contenu utilisateur) sont protégés par des droits de propriété intellectuelle.</li>
+                <li>L’utilisation de l’app ne te confère aucun droit de propriété sur celle-ci.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Vie privée</h3>
+              <ul>
+                <li>Ton utilisation est également régie par notre Politique de confidentialité.</li>
+                <li>Cette politique explique les données collectées, leurs usages et tes droits.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Services tiers</h3>
+              <ul>
+                <li>L’app peut intégrer des services tiers (hébergement, analytics, paiements).</li>
+                <li>Nous ne sommes pas responsables des pratiques ou contenus de ces services tiers.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Disponibilité &amp; modifications</h3>
+              <ul>
+                <li>Nous pouvons mettre à jour, suspendre ou interrompre tout ou partie du service à tout moment, avec ou sans préavis.</li>
+                <li>Nous ne garantissons pas une disponibilité ininterrompue.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Limitation de responsabilité</h3>
+              <ul>
+                <li>Dans les limites autorisées par la loi, Arbore ne saurait être responsable des dommages indirects, spéciaux, accessoires ou consécutifs, ni de pertes de données ou de profits.</li>
+                <li>Ton seul recours en cas d’insatisfaction est de cesser d’utiliser l’app et, le cas échéant, d’annuler ton abonnement.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Indemnisation</h3>
+              <ul>
+                <li>Tu acceptes d’indemniser Arbore pour toute réclamation résultant d’une violation de ces Conditions ou d’un usage illégal de l’app.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Loi applicable &amp; juridiction</h3>
+              <ul>
+                <li>Ces Conditions sont régies par le droit applicable dans ton pays de résidence si la loi locale l’impose, à défaut par le droit français.</li>
+                <li>Tout litige sera soumis aux tribunaux compétents déterminés par ces règles.</li>
+              </ul>
+            </section>
+
+            <section class="legal-block">
+              <h3>Nous contacter</h3>
+              <ul>
+                <li>Pour toute question ou réclamation liée à ces Conditions, contacte-nous.</li>
+              </ul>
+              <a class="legal-contact" href="mailto:support@arbore.app">support@arbore.app</a>
+            </section>
+          </div>
+
+          <div class="legal-footer-note">
+            <h3>Mises à jour de ces Conditions</h3>
+            <p>
+              Nous pouvons modifier ces Conditions pour refléter l’évolution de nos services et de nos obligations légales.
+              Nous t’informerons des changements importants dans l’app.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="brand" aria-label="Arbore accueil">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="footer-links">
+        <a href="mailto:contactus@arbore.app">contactus@arbore.app</a>
+        <a href="#confidentialite">Confidentialité</a>
+        <a href="#conditions">Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

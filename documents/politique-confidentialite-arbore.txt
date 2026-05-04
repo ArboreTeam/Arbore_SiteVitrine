@@ -1,0 +1,58 @@
+Arbore - Politique de confidentialité
+Dernière mise à jour : 11 Nov 2025
+
+Arbore respecte ta vie privée.
+Cette politique explique quelles données nous collectons, comment nous les utilisons et les choix dont tu disposes.
+
+Données que nous collectons
+- Identité : nom, adresse e-mail, identifiant Firebase.
+- Utilisation : scans de plantes, préférences d’affichage, interactions dans l’app.
+- Appareil & diagnostics : version de l’app, modèle d’appareil, journaux de crash.
+- Contenu utilisateur : photos/visuels importés pour l’identification.
+- Achats : historiques d’abonnement (via App Store / Play Store).
+
+Pourquoi nous utilisons ces données
+- Fournir les fonctionnalités principales de Arbore (scans, recommandations, sauvegardes).
+- Personnaliser ton expérience (styles, notifications météo, conseils).
+- Améliorer la qualité (analyses d’usage, correction de bugs, sécurité).
+- Gérer l’abonnement et l’assistance client.
+- Respecter nos obligations légales.
+
+Base légale (RGPD)
+- Exécution du contrat : fournir l’app et ses services.
+- Intérêts légitimes : améliorer et sécuriser Arbore.
+- Consentement : notifications, accès caméra/photos.
+- Obligation légale : conservation liée à la facturation.
+
+Conservation
+- Nous conservons tes données uniquement le temps nécessaire pour fournir le service.
+- Tu peux supprimer ton compte depuis ton profil ; les données associées sont alors supprimées ou anonymisées, sauf obligation légale de conservation.
+
+Partage & destinataires
+- Fournisseurs techniques : hébergement, analytics, rapports de crash.
+- Paiements & abonnements : App Store / Play Store.
+- Nous ne vendons pas tes données. Les transferts sont limités au nécessaire et encadrés par contrat.
+
+Tes droits
+- Accès, rectification, portabilité, effacement.
+- Opposition et limitation dans les cas prévus par la loi.
+- Retrait du consentement (ex : notifications) à tout moment.
+- Pour exercer tes droits, contacte-nous à : support@arbore.app.
+
+Sécurité
+- Chiffrement en transit (HTTPS) et bonnes pratiques de sécurité.
+- Accès restreint aux seules personnes habilitées.
+- Sur mobile, protège ton appareil (code, Face/Touch ID).
+
+Enfants
+- Arbore ne vise pas les personnes de moins de 13 ans (ou l’âge légal local).
+- Si une collecte inappropriée nous est signalée, nous supprimerons les données concernées.
+
+Transferts internationaux
+- Lorsque des données sont traitées hors UE/EEE, nous appliquons des garanties appropriées (clauses types, mesures complémentaires) conformément au RGPD.
+
+Nous contacter
+Pour toute question, demande d’accès ou suppression de données, écris-nous : support@arbore.app.
+
+Modifications de cette politique
+Nous pouvons mettre à jour cette politique pour refléter l’évolution de nos pratiques. Toute modification importante sera indiquée dans l’app.
