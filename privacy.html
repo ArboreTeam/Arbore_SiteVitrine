@@ -274,12 +274,10 @@
                 <h3><span lang="fr">Contenu de jardin &amp; RA</span><span lang="en">Garden &amp; AR content</span></h3>
                 <ul lang="fr">
                   <li>Plantes sélectionnées, positions et disposition 3D de vos jardins.</li>
-                  <li>Cartes spatiales (ARKit WorldMap) et données de scène nécessaires pour réafficher un jardin.</li>
                   <li>Réponses au questionnaire (lumière, arrosage, substrat) servant à générer des recommandations.</li>
                 </ul>
                 <ul lang="en">
                   <li>Selected plants, positions and 3D layout of your gardens.</li>
-                  <li>Spatial maps (ARKit WorldMap) and scene data needed to restore a garden.</li>
                   <li>Questionnaire answers (light, watering, soil) used to generate recommendations.</li>
                 </ul>
               </section>
@@ -309,16 +307,18 @@
               <p lang="fr">
                 <strong>Traité uniquement sur votre appareil, jamais envoyé à nos serveurs :</strong>
                 le flux caméra et le scanner LiDAR (placement en réalité augmentée et détection du sol),
-                les capteurs de mouvement (suivi RA), votre position approximative (calcul de l'ensoleillement
+                les capteurs de mouvement (suivi RA), les cartes spatiales ARKit (WorldMap) conservées
+                localement pour réafficher un jardin, votre position approximative (calcul de l'ensoleillement
                 par rapport à votre fenêtre), l'accès au calendrier (rappels d'arrosage) et Face ID
                 (connexion plus rapide, gérée par iOS — nous ne recevons aucune donnée biométrique).
               </p>
               <p lang="en">
                 <strong>Processed only on your device, never sent to our servers:</strong>
                 the camera feed and LiDAR scanner (augmented-reality placement and floor detection),
-                motion sensors (AR tracking), your approximate location (computing sunlight relative to your
-                window), calendar access (watering reminders), and Face ID (faster sign-in, handled by iOS —
-                we never receive any biometric data).
+                motion sensors (AR tracking), the ARKit spatial maps (WorldMap) kept locally to restore a
+                garden, your approximate location (computing sunlight relative to your window), calendar
+                access (watering reminders), and Face ID (faster sign-in, handled by iOS — we never receive
+                any biometric data).
               </p>
             </div>
           </div>
