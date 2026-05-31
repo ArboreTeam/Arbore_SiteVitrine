@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — Arbore</title>
+  <meta name="description" content="Politique de confidentialité d'Arbore : quelles données nous traitons, pourquoi, avec qui, et vos droits (RGPD). Privacy Policy in English and French." />
+  <meta name="author" content="Arbore" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #123d2a;
+      --forest-2: #194d36;
+      --green: #2f8f46;
+      --mint: #c9f4df;
+      --mint-soft: #ecfff5;
+      --cream: #f7f3ec;
+      --paper: #fffdf8;
+      --text: #173326;
+      --muted: #65756d;
+      --line: rgba(18, 61, 42, 0.12);
+      --shadow: 0 24px 70px rgba(18, 61, 42, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(1060px, calc(100% - 40px)); margin: 0 auto; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 243, 236, 0.84);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      height: 76px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 800; letter-spacing: -0.04em;
+      color: var(--forest); font-size: 1.35rem;
+    }
+    .logo-mark {
+      width: 38px; height: 38px; border-radius: 12px;
+      background: var(--forest); display: block; object-fit: cover;
+      box-shadow: 0 12px 30px rgba(18, 61, 42, 0.22);
+    }
+    .nav-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .nav-links, .footer-links {
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+      color: var(--muted); font-weight: 700; font-size: 0.95rem;
+    }
+    .nav-links a:hover, .footer-links a:hover { color: var(--forest); }
+
+    .lang-toggle {
+      display: inline-flex; border: 1px solid var(--line);
+      border-radius: 999px; overflow: hidden; background: white;
+    }
+    .lang-toggle button {
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit; font-weight: 800; font-size: 0.85rem;
+      color: var(--muted); padding: 8px 14px;
+    }
+    .lang-toggle button[aria-pressed="true"] { background: var(--forest); color: white; }
+
+    .hero { padding: 64px 0 36px; }
+    .section-label {
+      color: var(--green); font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; font-size: 0.78rem; margin-bottom: 12px;
+    }
+    h1 {
+      max-width: 820px; color: var(--forest);
+      font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.0;
+      letter-spacing: -0.05em; margin-bottom: 18px;
+    }
+    .hero p { max-width: 760px; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+    .legal-date {
+      display: inline-flex; margin-top: 16px; color: var(--forest);
+      background: var(--mint-soft); border: 1px solid rgba(47, 143, 70, 0.16);
+      border-radius: 999px; padding: 8px 12px; font-size: 0.86rem; font-weight: 800;
+    }
+
+    .legal-page { padding: 18px 0 86px; }
+    .legal-document {
+      background: rgba(255, 255, 255, 0.78); border: 1px solid var(--line);
+      border-radius: var(--radius-xl); box-shadow: var(--shadow);
+      padding: 34px; margin-bottom: 26px;
+    }
+    .legal-section { margin-bottom: 30px; }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section > h2 {
+      color: var(--forest); font-size: clamp(1.3rem, 3vw, 1.7rem);
+      letter-spacing: -0.03em; margin-bottom: 14px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--line);
+    }
+    .legal-section p { color: var(--muted); line-height: 1.72; margin-bottom: 12px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section strong { color: var(--text); }
+
+    .legal-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;
+    }
+    .legal-block {
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: var(--radius-lg); padding: 22px;
+    }
+    .legal-block h3 { color: var(--forest); font-size: 1.05rem; margin-bottom: 12px; }
+    .legal-block ul { list-style: none; display: grid; gap: 10px; }
+    .legal-block li {
+      position: relative; padding-left: 17px; color: var(--muted);
+      line-height: 1.62; font-size: 0.95rem;
+    }
+    .legal-block li::before {
+      content: ""; position: absolute; left: 0; top: 0.68em;
+      width: 5px; height: 5px; border-radius: 999px; background: var(--green);
+    }
+    .legal-block li strong { color: var(--text); }
+
+    table.legal-table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 0.93rem; }
+    table.legal-table th, table.legal-table td {
+      text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--muted); line-height: 1.5; vertical-align: top;
+    }
+    table.legal-table th { color: var(--forest); font-weight: 800; }
+    table.legal-table td strong { color: var(--text); }
+
+    .callout {
+      background: var(--mint-soft); border: 1px solid rgba(47, 143, 70, 0.18);
+      border-radius: var(--radius-lg); padding: 18px 20px; margin: 6px 0 0;
+    }
+    .callout p { color: var(--forest); margin: 0; }
+
+    .legal-footer-note {
+      background: linear-gradient(135deg, var(--forest), var(--forest-2));
+      color: white; border-radius: var(--radius-lg); padding: 22px; margin-top: 8px;
+    }
+    .legal-footer-note h3 { font-size: 1.02rem; margin-bottom: 8px; }
+    .legal-footer-note p { color: rgba(255, 255, 255, 0.82); line-height: 1.65; margin: 0; }
+    .legal-footer-note a { color: white; text-decoration: underline; }
+
+    .contact-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 46px; border-radius: 999px; padding: 12px 18px; margin-top: 6px;
+      background: white; border: 1px solid var(--line); color: var(--forest); font-weight: 800;
+      box-shadow: 0 12px 26px rgba(18, 61, 42, 0.06);
+    }
+
+    footer { padding: 42px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 24px; align-items: center; flex-wrap: wrap; }
+
+    /* Language toggling */
+    html[data-lang="fr"] [lang="en"] { display: none !important; }
+    html[data-lang="en"] [lang="fr"] { display: none !important; }
+
+    @media (max-width: 860px) {
+      .nav-inner { height: auto; padding: 16px 0; align-items: flex-start; flex-direction: column; }
+      .legal-document { padding: 24px; }
+      .legal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Navigation">
+          <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+          <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+          <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="section-label"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></div>
+        <h1>
+          <span lang="fr">Politique de confidentialité</span>
+          <span lang="en">Privacy Policy</span>
+        </h1>
+        <p lang="fr">
+          Arbore respecte votre vie privée. Cette politique explique quelles données personnelles
+          nous traitons lorsque vous utilisez l'application Arbore, pourquoi, avec quels prestataires,
+          combien de temps nous les conservons et quels droits vous avez au titre du RGPD.
+        </p>
+        <p lang="en">
+          Arbore respects your privacy. This policy explains what personal data we process when you use
+          the Arbore app, why, with which providers, how long we keep it, and the rights you have under
+          the EU General Data Protection Regulation (GDPR).
+        </p>
+        <span class="legal-date">
+          <span lang="fr">Dernière mise à jour : 31 mai 2026 — version 2.0</span>
+          <span lang="en">Last updated: 31 May 2026 — version 2.0</span>
+        </span>
+      </div>
+    </section>
+
+    <section class="legal-page">
+      <div class="container">
+        <article class="legal-document">
+
+          <!-- 1. Controller -->
+          <div class="legal-section">
+            <h2><span lang="fr">1. Responsable du traitement</span><span lang="en">1. Data controller</span></h2>
+            <p lang="fr">
+              Arbore est une application mobile éditée par l'équipe Arbore, un projet étudiant développé
+              dans le cadre de la scolarité à Epitech. Le projet n'a pas de finalité commerciale et
+              l'application est, à ce jour, gratuite et distribuée en bêta via Apple TestFlight.
+              Pour toute question relative à vos données, vous pouvez nous écrire à
+              <strong>support@arbore.app</strong>.
+            </p>
+            <p lang="en">
+              Arbore is a mobile app published by the Arbore team, a student project developed as part of
+              coursework at Epitech. The project is non-commercial; the app is, to date, free and distributed
+              as a beta through Apple TestFlight. For any question about your data, contact us at
+              <strong>support@arbore.app</strong>.
+            </p>
+            <div class="callout">
+              <p lang="fr">
+                <strong>Arbore est en bêta.</strong> Les fonctionnalités et les traitements de données
+                peuvent évoluer ; toute modification importante de cette politique sera annoncée dans l'application.
+              </p>
+              <p lang="en">
+                <strong>Arbore is in beta.</strong> Features and data processing may evolve; any material change
+                to this policy will be announced inside the app.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Data we collect -->
+          <div class="legal-section">
+            <h2><span lang="fr">2. Données que nous traitons</span><span lang="en">2. Data we process</span></h2>
+            <div class="legal-grid">
+              <section class="legal-block">
+                <h3><span lang="fr">Compte et identité</span><span lang="en">Account &amp; identity</span></h3>
+                <ul lang="fr">
+                  <li>Adresse e-mail, nom (ou pseudo affiché), identifiant Firebase (UID), date de création du compte.</li>
+                  <li>Fournisseur de connexion utilisé : e-mail/mot de passe, Google ou « Se connecter avec Apple ».</li>
+                  <li>Photo de profil, uniquement si vous en choisissez une.</li>
+                </ul>
+                <ul lang="en">
+                  <li>Email address, name (or display name), Firebase identifier (UID), account creation date.</li>
+                  <li>The sign-in provider you use: email/password, Google, or “Sign in with Apple”.</li>
+                  <li>A profile picture, only if you choose to add one.</li>
+                </ul>
+              </section>
+              <section class="legal-block">
+                <h3><span lang="fr">Contenu de jardin &amp; RA</span><span lang="en">Garden &amp; AR content</span></h3>
+                <ul lang="fr">
+                  <li>Plantes sélectionnées, positions et disposition 3D de vos jardins.</li>
+                  <li>Cartes spatiales (ARKit WorldMap) et données de scène nécessaires pour réafficher un jardin.</li>
+                  <li>Réponses au questionnaire (lumière, arrosage, substrat) servant à générer des recommandations.</li>
+                </ul>
+                <ul lang="en">
+                  <li>Selected plants, positions and 3D layout of your gardens.</li>
+                  <li>Spatial maps (ARKit WorldMap) and scene data needed to restore a garden.</li>
+                  <li>Questionnaire answers (light, watering, soil) used to generate recommendations.</li>
+                </ul>
+              </section>
+              <section class="legal-block">
+                <h3><span lang="fr">Consentements (RGPD)</span><span lang="en">Consent records (GDPR)</span></h3>
+                <ul lang="fr">
+                  <li>Le détail des consentements que vous accordez ou retirez (type, version, date).</li>
+                  <li>Des métadonnées techniques (adresse IP, agent utilisateur) conservées comme preuve de consentement.</li>
+                </ul>
+                <ul lang="en">
+                  <li>The consents you grant or withdraw (type, version, timestamp).</li>
+                  <li>Technical metadata (IP address, user agent) kept as proof of consent.</li>
+                </ul>
+              </section>
+              <section class="legal-block">
+                <h3><span lang="fr">Journaux techniques</span><span lang="en">Technical logs</span></h3>
+                <ul lang="fr">
+                  <li>Journaux serveur standards (adresse IP, horodatage, requête) à des fins de sécurité et de débogage.</li>
+                </ul>
+                <ul lang="en">
+                  <li>Standard server logs (IP address, timestamp, request) for security and debugging.</li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="callout" style="margin-top:18px">
+              <p lang="fr">
+                <strong>Traité uniquement sur votre appareil, jamais envoyé à nos serveurs :</strong>
+                le flux caméra et le scanner LiDAR (placement en réalité augmentée et détection du sol),
+                les capteurs de mouvement (suivi RA), votre position approximative (calcul de l'ensoleillement
+                par rapport à votre fenêtre), l'accès au calendrier (rappels d'arrosage) et Face ID
+                (connexion plus rapide, gérée par iOS — nous ne recevons aucune donnée biométrique).
+              </p>
+              <p lang="en">
+                <strong>Processed only on your device, never sent to our servers:</strong>
+                the camera feed and LiDAR scanner (augmented-reality placement and floor detection),
+                motion sensors (AR tracking), your approximate location (computing sunlight relative to your
+                window), calendar access (watering reminders), and Face ID (faster sign-in, handled by iOS —
+                we never receive any biometric data).
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Purposes & legal bases -->
+          <div class="legal-section">
+            <h2><span lang="fr">3. Finalités et bases légales</span><span lang="en">3. Purposes &amp; legal bases</span></h2>
+            <p lang="fr">Conformément à l'article 6 du RGPD, chaque traitement repose sur une base légale :</p>
+            <p lang="en">In line with Article 6 GDPR, each processing activity has a legal basis:</p>
+            <table class="legal-table" lang="fr">
+              <thead><tr><th>Finalité</th><th>Base légale</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Créer et gérer votre compte</strong>, vous connecter, sauvegarder et réafficher vos jardins</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+                <tr><td><strong>Générer des recommandations</strong> d'entretien à partir de vos réponses</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+                <tr><td><strong>Sécurité</strong>, prévention des abus, débogage, amélioration du service</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+                <tr><td><strong>Accès caméra, photos, localisation, calendrier, notifications</strong></td><td>Consentement via les autorisations iOS (art. 6.1.a)</td></tr>
+                <tr><td><strong>Conserver la preuve des consentements</strong></td><td>Obligation légale / responsabilité (art. 6.1.c &amp; 7.1)</td></tr>
+              </tbody>
+            </table>
+            <table class="legal-table" lang="en">
+              <thead><tr><th>Purpose</th><th>Legal basis</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Create and manage your account</strong>, sign you in, save and restore your gardens</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+                <tr><td><strong>Generate care recommendations</strong> from your answers</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+                <tr><td><strong>Security</strong>, abuse prevention, debugging, service improvement</td><td>Legitimate interests (Art. 6(1)(f))</td></tr>
+                <tr><td><strong>Camera, photos, location, calendar, notifications access</strong></td><td>Consent via the iOS permission prompts (Art. 6(1)(a))</td></tr>
+                <tr><td><strong>Keeping proof of consent</strong></td><td>Legal obligation / accountability (Art. 6(1)(c) &amp; 7(1))</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 4. Recipients -->
+          <div class="legal-section">
+            <h2><span lang="fr">4. Destinataires et sous-traitants</span><span lang="en">4. Recipients &amp; sub-processors</span></h2>
+            <p lang="fr">
+              Nous ne vendons jamais vos données et ne les utilisons pas à des fins publicitaires ni de suivi
+              entre applications. Pour fournir le service, nous faisons appel aux prestataires suivants :
+            </p>
+            <p lang="en">
+              We never sell your data and do not use it for advertising or cross-app tracking. To provide the
+              service, we rely on the following providers:
+            </p>
+            <table class="legal-table" lang="fr">
+              <thead><tr><th>Prestataire</th><th>Rôle</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Google Firebase Authentication</strong></td><td>Authentification et gestion des comptes</td></tr>
+                <tr><td><strong>Apple</strong> (Se connecter avec Apple)</td><td>Authentification, si vous la choisissez</td></tr>
+                <tr><td><strong>MongoDB Atlas</strong></td><td>Hébergement de la base de données (compte, jardins, consentements)</td></tr>
+                <tr><td><strong>Notre serveur API + Cloudflare</strong></td><td>Hébergement et diffusion sécurisée (TLS, CDN)</td></tr>
+                <tr><td><strong>Unsplash</strong></td><td>Récupération d'images illustratives de plantes (aucune donnée personnelle transmise)</td></tr>
+                <tr><td><strong>Fournisseur de génération IA</strong></td><td>Génération de fiches d'entretien à partir d'un nom de plante (aucune donnée personnelle transmise)</td></tr>
+                <tr><td><strong>GitHub Pages</strong></td><td>Hébergement de ce site web</td></tr>
+              </tbody>
+            </table>
+            <table class="legal-table" lang="en">
+              <thead><tr><th>Provider</th><th>Role</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Google Firebase Authentication</strong></td><td>Authentication and account management</td></tr>
+                <tr><td><strong>Apple</strong> (Sign in with Apple)</td><td>Authentication, if you choose it</td></tr>
+                <tr><td><strong>MongoDB Atlas</strong></td><td>Database hosting (account, gardens, consents)</td></tr>
+                <tr><td><strong>Our API server + Cloudflare</strong></td><td>Hosting and secure delivery (TLS, CDN)</td></tr>
+                <tr><td><strong>Unsplash</strong></td><td>Fetching illustrative plant images (no personal data sent)</td></tr>
+                <tr><td><strong>AI generation provider</strong></td><td>Generating plant-care sheets from a plant name (no personal data sent)</td></tr>
+                <tr><td><strong>GitHub Pages</strong></td><td>Hosting this website</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 5. Transfers -->
+          <div class="legal-section">
+            <h2><span lang="fr">5. Transferts internationaux</span><span lang="en">5. International transfers</span></h2>
+            <p lang="fr">
+              Certains prestataires (Google, Apple, MongoDB, Cloudflare) peuvent traiter des données en dehors
+              de l'Union européenne / EEE, notamment aux États-Unis. Ces transferts sont encadrés par des
+              garanties appropriées : clauses contractuelles types de la Commission européenne et, le cas échéant,
+              le cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework).
+            </p>
+            <p lang="en">
+              Some providers (Google, Apple, MongoDB, Cloudflare) may process data outside the EU/EEA, including
+              in the United States. Such transfers are covered by appropriate safeguards: the European Commission's
+              Standard Contractual Clauses and, where applicable, the EU–US Data Privacy Framework.
+            </p>
+          </div>
+
+          <!-- 6. Retention -->
+          <div class="legal-section">
+            <h2><span lang="fr">6. Durées de conservation</span><span lang="en">6. Data retention</span></h2>
+            <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="fr">
+              <li><strong>Compte, profil, jardins :</strong> conservés tant que votre compte existe. Ils sont supprimés lorsque vous supprimez votre compte.</li>
+              <li><strong>Consentements :</strong> conservés jusqu'à 3 ans après la fin du consentement, comme preuve (recommandation CNIL).</li>
+              <li><strong>Journaux serveur :</strong> conservés sur une courte durée à des fins de sécurité.</li>
+            </ul>
+            <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="en">
+              <li><strong>Account, profile, gardens:</strong> kept while your account exists. Deleted when you delete your account.</li>
+              <li><strong>Consents:</strong> kept up to 3 years after the consent ends, as proof (CNIL guidance).</li>
+              <li><strong>Server logs:</strong> kept for a short period for security purposes.</li>
+            </ul>
+          </div>
+
+          <!-- 7. Rights -->
+          <div class="legal-section">
+            <h2><span lang="fr">7. Vos droits</span><span lang="en">7. Your rights</span></h2>
+            <p lang="fr">
+              Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, de portabilité et
+              d'opposition (articles 15 à 22 du RGPD), ainsi que du droit de retirer votre consentement à tout moment.
+            </p>
+            <p lang="en">
+              You have the rights of access, rectification, erasure, restriction, portability and objection
+              (Articles 15–22 GDPR), and the right to withdraw your consent at any time.
+            </p>
+            <div class="legal-grid">
+              <section class="legal-block">
+                <h3><span lang="fr">En libre-service dans l'app</span><span lang="en">Self-service in the app</span></h3>
+                <ul lang="fr">
+                  <li>Modifier votre profil (nom, photo).</li>
+                  <li>Gérer vos consentements dans les réglages de confidentialité.</li>
+                  <li><strong>Supprimer votre compte</strong> : la suppression efface immédiatement votre compte, vos jardins et vos consentements.</li>
+                </ul>
+                <ul lang="en">
+                  <li>Edit your profile (name, picture).</li>
+                  <li>Manage your consents in the privacy settings.</li>
+                  <li><strong>Delete your account</strong>: deletion immediately erases your account, gardens and consents.</li>
+                </ul>
+              </section>
+              <section class="legal-block">
+                <h3><span lang="fr">Nous contacter / réclamation</span><span lang="en">Contact / complaint</span></h3>
+                <ul lang="fr">
+                  <li>Pour exercer vos droits : <strong>support@arbore.app</strong>.</li>
+                  <li>Vous pouvez introduire une réclamation auprès de la CNIL (<strong>cnil.fr</strong>) ou de votre autorité de contrôle locale.</li>
+                </ul>
+                <ul lang="en">
+                  <li>To exercise your rights: <strong>support@arbore.app</strong>.</li>
+                  <li>You may lodge a complaint with the French CNIL (<strong>cnil.fr</strong>) or your local supervisory authority.</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <!-- 8. Security -->
+          <div class="legal-section">
+            <h2><span lang="fr">8. Sécurité</span><span lang="en">8. Security</span></h2>
+            <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="fr">
+              <li>Chiffrement en transit (HTTPS/TLS) pour tous les échanges avec nos serveurs.</li>
+              <li>Accès restreint aux seuls membres autorisés de l'équipe.</li>
+              <li>Les mots de passe sont gérés par Firebase Authentication : nous ne les stockons jamais.</li>
+              <li>Protégez votre appareil (code, Face ID / Touch ID) pour sécuriser votre accès.</li>
+            </ul>
+            <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="en">
+              <li>Encryption in transit (HTTPS/TLS) for all exchanges with our servers.</li>
+              <li>Access restricted to authorised team members only.</li>
+              <li>Passwords are handled by Firebase Authentication: we never store them.</li>
+              <li>Protect your device (passcode, Face ID / Touch ID) to secure your access.</li>
+            </ul>
+          </div>
+
+          <!-- 9. Children -->
+          <div class="legal-section">
+            <h2><span lang="fr">9. Mineurs</span><span lang="en">9. Children</span></h2>
+            <p lang="fr">
+              Arbore ne s'adresse pas aux enfants de moins de 15 ans (âge du consentement numérique en France ;
+              13 ans dans d'autres pays). Nous ne collectons pas sciemment leurs données. Si une telle collecte
+              nous est signalée, nous supprimerons les données concernées.
+            </p>
+            <p lang="en">
+              Arbore is not directed at children under 15 (the digital-consent age in France; 13 in some other
+              countries). We do not knowingly collect their data. If we are informed of such collection, we will
+              delete the relevant data.
+            </p>
+          </div>
+
+          <!-- 10. Changes -->
+          <div class="legal-footer-note">
+            <h3><span lang="fr">Modifications de cette politique</span><span lang="en">Changes to this policy</span></h3>
+            <p lang="fr">
+              Nous pouvons mettre à jour cette politique pour refléter l'évolution de l'application et de nos
+              obligations légales. La version et la date figurent en haut de page ; toute modification importante
+              sera signalée dans l'application. Pour toute question : <a href="mailto:support@arbore.app">support@arbore.app</a>.
+            </p>
+            <p lang="en">
+              We may update this policy to reflect changes to the app and to our legal obligations. The version and
+              date appear at the top of the page; any material change will be flagged inside the app. For any
+              question: <a href="mailto:support@arbore.app">support@arbore.app</a>.
+            </p>
+          </div>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="footer-links">
+        <a href="mailto:support@arbore.app">support@arbore.app</a>
+        <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+        <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+        <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('.lang-toggle button');
+      function apply(lang) {
+        lang = (lang === 'en') ? 'en' : 'fr';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang);
+        buttons.forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        try { localStorage.setItem('arbore-lang', lang); } catch (e) {}
+      }
+      var url = new URLSearchParams(window.location.search).get('lang');
+      var stored = null;
+      try { stored = localStorage.getItem('arbore-lang'); } catch (e) {}
+      var nav = (navigator.language || 'fr').toLowerCase().indexOf('en') === 0 ? 'en' : 'fr';
+      apply(url || stored || nav);
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+      });
+    })();
+  </script>
+</body>
+</html>

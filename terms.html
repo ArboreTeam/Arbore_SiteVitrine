@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditions générales d'utilisation — Arbore</title>
+  <meta name="description" content="Conditions générales d'utilisation (CGU) d'Arbore : description du service, compte, contenu utilisateur, responsabilité, droit applicable. Terms of Service in English and French." />
+  <meta name="author" content="Arbore" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #123d2a;
+      --forest-2: #194d36;
+      --green: #2f8f46;
+      --mint: #c9f4df;
+      --mint-soft: #ecfff5;
+      --cream: #f7f3ec;
+      --paper: #fffdf8;
+      --text: #173326;
+      --muted: #65756d;
+      --line: rgba(18, 61, 42, 0.12);
+      --shadow: 0 24px 70px rgba(18, 61, 42, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream); color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1060px, calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px);
+      background: rgba(247, 243, 236, 0.84); border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.04em; color: var(--forest); font-size: 1.35rem; }
+    .logo-mark { width: 38px; height: 38px; border-radius: 12px; background: var(--forest); display: block; object-fit: cover; box-shadow: 0 12px 30px rgba(18, 61, 42, 0.22); }
+    .nav-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .nav-links, .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; color: var(--muted); font-weight: 700; font-size: 0.95rem; }
+    .nav-links a:hover, .footer-links a:hover { color: var(--forest); }
+    .lang-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: white; }
+    .lang-toggle button { border: 0; background: transparent; cursor: pointer; font-family: inherit; font-weight: 800; font-size: 0.85rem; color: var(--muted); padding: 8px 14px; }
+    .lang-toggle button[aria-pressed="true"] { background: var(--forest); color: white; }
+    .hero { padding: 64px 0 36px; }
+    .section-label { color: var(--green); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 12px; }
+    h1 { max-width: 820px; color: var(--forest); font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.0; letter-spacing: -0.05em; margin-bottom: 18px; }
+    .hero p { max-width: 760px; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+    .legal-date { display: inline-flex; margin-top: 16px; color: var(--forest); background: var(--mint-soft); border: 1px solid rgba(47, 143, 70, 0.16); border-radius: 999px; padding: 8px 12px; font-size: 0.86rem; font-weight: 800; }
+    .legal-page { padding: 18px 0 86px; }
+    .legal-document { background: rgba(255, 255, 255, 0.78); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); padding: 34px; margin-bottom: 26px; }
+    .legal-section { margin-bottom: 30px; }
+    .legal-section:last-child { margin-bottom: 0; }
+    .legal-section > h2 { color: var(--forest); font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: -0.03em; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .legal-section p { color: var(--muted); line-height: 1.72; margin-bottom: 12px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { list-style: none; display: grid; gap: 10px; margin-top: 4px; }
+    .legal-section li { position: relative; padding-left: 17px; color: var(--muted); line-height: 1.66; }
+    .legal-section li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 5px; height: 5px; border-radius: 999px; background: var(--green); }
+    .legal-section strong { color: var(--text); }
+    .callout { background: var(--mint-soft); border: 1px solid rgba(47, 143, 70, 0.18); border-radius: var(--radius-lg); padding: 18px 20px; margin: 6px 0 0; }
+    .callout p { color: var(--forest); margin: 0; }
+    .legal-footer-note { background: linear-gradient(135deg, var(--forest), var(--forest-2)); color: white; border-radius: var(--radius-lg); padding: 22px; margin-top: 8px; }
+    .legal-footer-note h3 { font-size: 1.02rem; margin-bottom: 8px; }
+    .legal-footer-note p { color: rgba(255, 255, 255, 0.82); line-height: 1.65; margin: 0; }
+    .legal-footer-note a { color: white; text-decoration: underline; }
+    footer { padding: 42px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 24px; align-items: center; flex-wrap: wrap; }
+    html[data-lang="fr"] [lang="en"] { display: none !important; }
+    html[data-lang="en"] [lang="fr"] { display: none !important; }
+    @media (max-width: 860px) {
+      .nav-inner { height: auto; padding: 16px 0; align-items: flex-start; flex-direction: column; }
+      .legal-document { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Navigation">
+          <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+          <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+          <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="section-label"><span lang="fr">Conditions</span><span lang="en">Terms</span></div>
+        <h1>
+          <span lang="fr">Conditions générales d'utilisation</span>
+          <span lang="en">Terms of Service</span>
+        </h1>
+        <p lang="fr">
+          Merci d'utiliser Arbore. Les présentes conditions générales d'utilisation (les « Conditions »)
+          encadrent votre accès à l'application Arbore et son utilisation. Veuillez les lire attentivement.
+        </p>
+        <p lang="en">
+          Thank you for using Arbore. These Terms of Service (the “Terms”) govern your access to and use of
+          the Arbore app. Please read them carefully.
+        </p>
+        <span class="legal-date">
+          <span lang="fr">Dernière mise à jour : 31 mai 2026 — version 2.0</span>
+          <span lang="en">Last updated: 31 May 2026 — version 2.0</span>
+        </span>
+      </div>
+    </section>
+
+    <section class="legal-page">
+      <div class="container">
+        <article class="legal-document">
+
+          <div class="legal-section">
+            <h2><span lang="fr">1. Acceptation des Conditions</span><span lang="en">1. Acceptance of the Terms</span></h2>
+            <p lang="fr">En créant un compte ou en utilisant Arbore, vous acceptez les présentes Conditions ainsi que notre <a href="privacy.html" style="color:var(--green);font-weight:700">Politique de confidentialité</a>. Si vous ne les acceptez pas, vous ne devez pas utiliser l'application.</p>
+            <p lang="en">By creating an account or using Arbore, you agree to these Terms and to our <a href="privacy.html" style="color:var(--green);font-weight:700">Privacy Policy</a>. If you do not accept them, you must not use the app.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">2. Description du service</span><span lang="en">2. Service description</span></h2>
+            <p lang="fr">Arbore est une application de jardinage en réalité augmentée. Elle vous permet notamment de :</p>
+            <p lang="en">Arbore is an augmented-reality gardening app. It lets you, among other things:</p>
+            <ul lang="fr">
+              <li>choisir des plantes et obtenir des recommandations d'entretien personnalisées ;</li>
+              <li>visualiser des plantes en 3D et en réalité augmentée dans votre espace ;</li>
+              <li>composer et sauvegarder des « jardins » et les réafficher au même endroit ;</li>
+              <li>recevoir des rappels d'arrosage.</li>
+            </ul>
+            <ul lang="en">
+              <li>choose plants and get personalised care recommendations;</li>
+              <li>visualise plants in 3D and augmented reality in your space;</li>
+              <li>build and save “gardens” and restore them in the same place;</li>
+              <li>receive watering reminders.</li>
+            </ul>
+            <div class="callout">
+              <p lang="fr"><strong>Application gratuite et en bêta.</strong> Arbore est actuellement gratuite : aucun abonnement ni achat intégré n'est proposé. L'application est distribuée en bêta via Apple TestFlight et peut contenir des fonctionnalités incomplètes ou instables.</p>
+              <p lang="en"><strong>Free app, in beta.</strong> Arbore is currently free: there are no subscriptions or in-app purchases. The app is distributed as a beta through Apple TestFlight and may contain incomplete or unstable features.</p>
+            </div>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">3. Éligibilité et compte</span><span lang="en">3. Eligibility &amp; account</span></h2>
+            <ul lang="fr">
+              <li>Vous devez avoir au moins 15 ans (ou l'âge du consentement numérique applicable dans votre pays) pour utiliser Arbore.</li>
+              <li>Vous êtes responsable de l'exactitude des informations de votre compte et de la confidentialité de vos identifiants.</li>
+              <li>Prévenez-nous immédiatement en cas d'usage non autorisé de votre compte.</li>
+            </ul>
+            <ul lang="en">
+              <li>You must be at least 15 (or the digital-consent age applicable in your country) to use Arbore.</li>
+              <li>You are responsible for the accuracy of your account information and for keeping your credentials confidential.</li>
+              <li>Notify us immediately of any unauthorised use of your account.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">4. Contenu utilisateur</span><span lang="en">4. User content</span></h2>
+            <ul lang="fr">
+              <li>Vous conservez vos droits sur les contenus que vous importez ou créez (photo de profil, jardins).</li>
+              <li>Vous nous accordez une licence mondiale, non exclusive et révocable pour héberger, traiter et afficher ce contenu, uniquement afin de fournir le service.</li>
+              <li>Vous garantissez disposer des droits nécessaires sur les contenus que vous partagez.</li>
+            </ul>
+            <ul lang="en">
+              <li>You keep your rights over the content you upload or create (profile picture, gardens).</li>
+              <li>You grant us a worldwide, non-exclusive, revocable licence to host, process and display this content solely to provide the service.</li>
+              <li>You warrant that you hold the necessary rights to the content you share.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">5. Usages interdits</span><span lang="en">5. Prohibited uses</span></h2>
+            <ul lang="fr">
+              <li>Ingénierie inverse, contournement des mesures de sécurité, usage frauduleux ou illégal.</li>
+              <li>Interférence avec le service, surcharge des serveurs, collecte automatisée non autorisée.</li>
+              <li>Publication de contenus illégaux, offensants, diffamatoires ou portant atteinte aux droits d'autrui.</li>
+            </ul>
+            <ul lang="en">
+              <li>Reverse engineering, circumventing security measures, fraudulent or illegal use.</li>
+              <li>Interfering with the service, overloading servers, or unauthorised automated collection.</li>
+              <li>Posting illegal, offensive, defamatory content, or content infringing others' rights.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">6. Disponibilité, bêta et « en l'état »</span><span lang="en">6. Availability, beta &amp; “as is”</span></h2>
+            <ul lang="fr">
+              <li>Le service est fourni « en l'état » et « selon disponibilité ». En tant que produit en bêta, il peut comporter des erreurs et être modifié, suspendu ou interrompu à tout moment, avec ou sans préavis.</li>
+              <li>Nous ne garantissons pas une disponibilité ininterrompue ni l'absence de perte de données. Conservez une copie de tout contenu important.</li>
+            </ul>
+            <ul lang="en">
+              <li>The service is provided “as is” and “as available”. As a beta product, it may contain errors and may be modified, suspended or discontinued at any time, with or without notice.</li>
+              <li>We do not guarantee uninterrupted availability or the absence of data loss. Keep a copy of anything important.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">7. Propriété intellectuelle</span><span lang="en">7. Intellectual property</span></h2>
+            <ul lang="fr">
+              <li>Le nom Arbore, son logo, l'application et son contenu (hors contenu utilisateur) sont protégés par des droits de propriété intellectuelle.</li>
+              <li>L'utilisation de l'application ne vous confère aucun droit de propriété sur celle-ci.</li>
+            </ul>
+            <ul lang="en">
+              <li>The Arbore name, logo, app and content (excluding user content) are protected by intellectual-property rights.</li>
+              <li>Using the app does not grant you any ownership rights over it.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">8. Services tiers et boutiques d'applications</span><span lang="en">8. Third-party services &amp; app stores</span></h2>
+            <p lang="fr">L'application repose sur des services tiers (Firebase, Apple, MongoDB, Cloudflare, Unsplash) décrits dans la Politique de confidentialité ; leurs propres conditions s'appliquent et nous ne sommes pas responsables de leurs pratiques.</p>
+            <p lang="en">The app relies on third-party services (Firebase, Apple, MongoDB, Cloudflare, Unsplash) described in the Privacy Policy; their own terms apply and we are not responsible for their practices.</p>
+            <div class="callout">
+              <p lang="fr"><strong>Mention Apple.</strong> Ces Conditions sont conclues entre vous et l'équipe Arbore, et non avec Apple. Apple n'est pas responsable de l'application ni de son contenu. Lorsque Arbore ne fournit pas son propre contrat de licence, le « Contrat de Licence Type d'Application sous Licence » d'Apple s'applique. Apple et ses filiales sont tiers bénéficiaires des présentes et peuvent les faire appliquer à votre encontre.</p>
+              <p lang="en"><strong>Apple notice.</strong> These Terms are between you and the Arbore team, not Apple. Apple is not responsible for the app or its content. Where Arbore does not provide its own licence agreement, Apple's “Standard Licensed Application End User License Agreement” applies. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</p>
+            </div>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">9. Limitation de responsabilité</span><span lang="en">9. Limitation of liability</span></h2>
+            <ul lang="fr">
+              <li>Dans les limites autorisées par la loi, l'équipe Arbore ne saurait être responsable des dommages indirects, spéciaux, accessoires ou consécutifs, ni des pertes de données ou de profits.</li>
+              <li>Aucune stipulation ne limite les droits impératifs que vous tenez de la loi applicable en tant que consommateur.</li>
+            </ul>
+            <ul lang="en">
+              <li>To the maximum extent permitted by law, the Arbore team shall not be liable for indirect, special, incidental or consequential damages, or for loss of data or profits.</li>
+              <li>Nothing in these Terms limits the mandatory rights you have as a consumer under applicable law.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">10. Suppression de compte et résiliation</span><span lang="en">10. Account deletion &amp; termination</span></h2>
+            <ul lang="fr">
+              <li>Vous pouvez cesser d'utiliser Arbore et supprimer votre compte à tout moment depuis l'application ; cela efface votre compte, vos jardins et vos consentements.</li>
+              <li>Nous pouvons suspendre ou résilier l'accès en cas de violation des présentes Conditions ou d'usage illicite.</li>
+            </ul>
+            <ul lang="en">
+              <li>You can stop using Arbore and delete your account at any time from the app; this erases your account, gardens and consents.</li>
+              <li>We may suspend or terminate access in case of breach of these Terms or unlawful use.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2><span lang="fr">11. Droit applicable et juridiction</span><span lang="en">11. Governing law &amp; jurisdiction</span></h2>
+            <p lang="fr">Les présentes Conditions sont régies par le droit français, sans préjudice des protections impératives dont vous bénéficiez en tant que consommateur dans votre pays de résidence. Tout litige relève des tribunaux compétents selon ces règles. Pour les questions de données personnelles, l'autorité de contrôle compétente est la CNIL.</p>
+            <p lang="en">These Terms are governed by French law, without prejudice to the mandatory consumer protections of your country of residence. Any dispute is subject to the competent courts under those rules. For personal-data matters, the competent supervisory authority is the French CNIL.</p>
+          </div>
+
+          <div class="legal-footer-note">
+            <h3><span lang="fr">Modifications de ces Conditions</span><span lang="en">Changes to these Terms</span></h3>
+            <p lang="fr">Nous pouvons modifier ces Conditions pour refléter l'évolution du service et de nos obligations légales. La version et la date figurent en haut de page ; toute modification importante sera signalée dans l'application. Pour toute question : <a href="mailto:support@arbore.app">support@arbore.app</a>.</p>
+            <p lang="en">We may amend these Terms to reflect changes to the service and to our legal obligations. The version and date appear at the top of the page; any material change will be flagged inside the app. For any question: <a href="mailto:support@arbore.app">support@arbore.app</a>.</p>
+          </div>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="footer-links">
+        <a href="mailto:support@arbore.app">support@arbore.app</a>
+        <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+        <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+        <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('.lang-toggle button');
+      function apply(lang) {
+        lang = (lang === 'en') ? 'en' : 'fr';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang);
+        buttons.forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        try { localStorage.setItem('arbore-lang', lang); } catch (e) {}
+      }
+      var url = new URLSearchParams(window.location.search).get('lang');
+      var stored = null;
+      try { stored = localStorage.getItem('arbore-lang'); } catch (e) {}
+      var nav = (navigator.language || 'fr').toLowerCase().indexOf('en') === 0 ? 'en' : 'fr';
+      apply(url || stored || nav);
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+      });
+    })();
+  </script>
+</body>
+</html>
