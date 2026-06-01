@@ -22,16 +22,16 @@ toute modification importante sera annoncée dans l'application.
   Firebase (UID), date de création, fournisseur de connexion (e-mail/mot de
   passe, Google, ou Se connecter avec Apple), photo de profil si vous en ajoutez une.
 - Contenu de jardin et RA : plantes sélectionnées, positions et disposition 3D,
-  cartes spatiales (ARKit WorldMap), réponses au questionnaire (lumière,
-  arrosage, substrat).
+  réponses au questionnaire (lumière, arrosage, substrat).
 - Consentements (RGPD) : type, version, date, ainsi qu'une adresse IP et un agent
   utilisateur conservés comme preuve de consentement.
 - Journaux techniques : journaux serveur standards (IP, horodatage, requête).
 
 Traité uniquement sur votre appareil, jamais envoyé à nos serveurs : le flux
-caméra et le LiDAR (RA, détection du sol), les capteurs de mouvement, la position
-approximative (ensoleillement), le calendrier (rappels d'arrosage) et Face ID
-(connexion plus rapide, gérée par iOS — aucune donnée biométrique reçue).
+caméra et le LiDAR (RA, détection du sol), les capteurs de mouvement, les cartes
+spatiales ARKit (WorldMap) conservées localement pour réafficher un jardin, la
+position approximative (ensoleillement), le calendrier (rappels d'arrosage) et
+Face ID (connexion plus rapide, gérée par iOS — aucune donnée biométrique reçue).
 
 3. Finalités et bases légales (art. 6 RGPD)
 - Créer/gérer le compte, sauvegarder et réafficher les jardins : exécution du contrat.
