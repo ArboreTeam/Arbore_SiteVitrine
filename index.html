@@ -560,24 +560,29 @@
       color: rgba(255,255,255,0.75);
     }
 
-    .qr-placeholder {
-      width: 170px;
-      height: 170px;
+    .qr-code-link {
+      width: 184px;
+      height: 184px;
       border-radius: 24px;
-      background:
-        linear-gradient(90deg, rgba(18,61,42,0.12) 1px, transparent 1px),
-        linear-gradient(rgba(18,61,42,0.12) 1px, transparent 1px),
-        #fff;
-      background-size: 18px 18px;
-      border: 1px dashed rgba(18, 61, 42, 0.28);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: var(--forest);
-      font-weight: 800;
-      font-size: 0.84rem;
-      padding: 18px;
+      background: white;
+      border: 1px solid rgba(18, 61, 42, 0.12);
+      display: block;
+      padding: 12px;
       margin-top: 26px;
+      box-shadow: 0 18px 38px rgba(18, 61, 42, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qr-code-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 48px rgba(18, 61, 42, 0.16);
+    }
+
+    .qr-code-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 16px;
     }
 
     .store-badges {
@@ -1121,16 +1126,16 @@
               <div class="section-label">Application mobile</div>
               <h2>Téléchargez Arbore sur mobile.</h2>
               <p class="large-text">
-                Scannez le QR code pour accéder à l’application mobile.
+                Scannez le QR code pour rejoindre la bêta TestFlight.
               </p>
-              <div class="qr-placeholder">
-                QR CODE À AJOUTER<br />quand le lien App Store est prêt
-              </div>
-              <span class="replace-note">⚠️ Remplacer ce bloc par le vrai QR code.</span>
+              <a class="qr-code-link" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la bêta TestFlight Arbore">
+                <img class="qr-code-image" src="assets/arbore_testflight_qrcode.png" alt="QR code pour rejoindre la bêta TestFlight Arbore" />
+              </a>
             </div>
             <div class="store-badges">
               <a class="store-badge" href="#" aria-label="Lien App Store à ajouter"> App Store bientôt</a>
-              <a class="store-badge" href="#" aria-label="Lien TestFlight à ajouter">🧪 TestFlight bientôt</a>
+              <a class="store-badge" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer">🧪 Rejoindre TestFlight</a>
+              <a class="store-badge" href="assets/arbore_testflight_qrcode_card.png" download>Télécharger la carte QR</a>
             </div>
           </article>
 
