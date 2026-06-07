@@ -288,10 +288,16 @@
     .phone-screen {
       height: 100%;
       border-radius: 34px;
-      background: linear-gradient(180deg, #f9fff9, #eaf8ef);
+      background: #f2f1ec;
       overflow: hidden;
-      padding: 18px;
       position: relative;
+    }
+
+    .phone-capture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
     }
 
     .phone-top {
@@ -984,23 +990,7 @@
 
           <div class="phone">
             <div class="phone-screen">
-              <div class="phone-top">
-                <span>Arbore</span>
-                <span>🌿</span>
-              </div>
-              <div class="mini-map">
-                <span class="plant-dot dot-1">🪴</span>
-                <span class="plant-dot dot-2">🌵</span>
-                <span class="plant-dot dot-3">🌱</span>
-              </div>
-              <div class="app-card">
-                <h3>Jardin principal</h3>
-                <p>3 plantes recommandées selon la lumière, l’espace et l’entretien souhaité.</p>
-              </div>
-              <div class="app-card">
-                <h3>À faire aujourd’hui</h3>
-                <p>Arroser le pothos et vérifier l’exposition de votre monstera.</p>
-              </div>
+              <img class="phone-capture" src="assets/arbore_app_capture.jpg" alt="Capture de l'application Arbore affichant l'accueil et les jardins" />
             </div>
           </div>
         </div>
