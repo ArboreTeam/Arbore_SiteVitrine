@@ -1,58 +1,83 @@
-Arbore - Politique de confidentialité
-Dernière mise à jour : 11 Nov 2025
+Arbore — Politique de confidentialité
+Dernière mise à jour : 31 mai 2026 — version 2.0
 
-Arbore respecte ta vie privée.
-Cette politique explique quelles données nous collectons, comment nous les utilisons et les choix dont tu disposes.
+Version en ligne : https://arbore.app/privacy (FR / EN)
 
-Données que nous collectons
-- Identité : nom, adresse e-mail, identifiant Firebase.
-- Utilisation : scans de plantes, préférences d’affichage, interactions dans l’app.
-- Appareil & diagnostics : version de l’app, modèle d’appareil, journaux de crash.
-- Contenu utilisateur : photos/visuels importés pour l’identification.
-- Achats : historiques d’abonnement (via App Store / Play Store).
+Arbore respecte votre vie privée. Cette politique explique quelles données
+personnelles nous traitons lorsque vous utilisez l'application Arbore, pourquoi,
+avec quels prestataires, combien de temps nous les conservons et quels droits
+vous avez au titre du RGPD.
 
-Pourquoi nous utilisons ces données
-- Fournir les fonctionnalités principales de Arbore (scans, recommandations, sauvegardes).
-- Personnaliser ton expérience (styles, notifications météo, conseils).
-- Améliorer la qualité (analyses d’usage, correction de bugs, sécurité).
-- Gérer l’abonnement et l’assistance client.
-- Respecter nos obligations légales.
+Arbore est en bêta : les fonctionnalités et les traitements peuvent évoluer ;
+toute modification importante sera annoncée dans l'application.
 
-Base légale (RGPD)
-- Exécution du contrat : fournir l’app et ses services.
-- Intérêts légitimes : améliorer et sécuriser Arbore.
-- Consentement : notifications, accès caméra/photos.
-- Obligation légale : conservation liée à la facturation.
+1. Responsable du traitement
+- Arbore est une application éditée par l'équipe Arbore, projet étudiant non
+  commercial développé dans le cadre de la scolarité à Epitech.
+- L'application est gratuite et distribuée en bêta via Apple TestFlight.
+- Contact : support@arbore.app
 
-Conservation
-- Nous conservons tes données uniquement le temps nécessaire pour fournir le service.
-- Tu peux supprimer ton compte depuis ton profil ; les données associées sont alors supprimées ou anonymisées, sauf obligation légale de conservation.
+2. Données que nous traitons
+- Compte et identité : adresse e-mail, nom (ou pseudo affiché), identifiant
+  Firebase (UID), date de création, fournisseur de connexion (e-mail/mot de
+  passe, Google, ou Se connecter avec Apple), photo de profil si vous en ajoutez une.
+- Contenu de jardin et RA : plantes sélectionnées, positions et disposition 3D,
+  réponses au questionnaire (lumière, arrosage, substrat).
+- Consentements (RGPD) : type, version, date, ainsi qu'une adresse IP et un agent
+  utilisateur conservés comme preuve de consentement.
+- Journaux techniques : journaux serveur standards (IP, horodatage, requête).
 
-Partage & destinataires
-- Fournisseurs techniques : hébergement, analytics, rapports de crash.
-- Paiements & abonnements : App Store / Play Store.
-- Nous ne vendons pas tes données. Les transferts sont limités au nécessaire et encadrés par contrat.
+Traité uniquement sur votre appareil, jamais envoyé à nos serveurs : le flux
+caméra et le LiDAR (RA, détection du sol), les capteurs de mouvement, les cartes
+spatiales ARKit (WorldMap) conservées localement pour réafficher un jardin, la
+position approximative (ensoleillement), le calendrier (rappels d'arrosage) et
+Face ID (connexion plus rapide, gérée par iOS — aucune donnée biométrique reçue).
 
-Tes droits
-- Accès, rectification, portabilité, effacement.
-- Opposition et limitation dans les cas prévus par la loi.
-- Retrait du consentement (ex : notifications) à tout moment.
-- Pour exercer tes droits, contacte-nous à : support@arbore.app.
+3. Finalités et bases légales (art. 6 RGPD)
+- Créer/gérer le compte, sauvegarder et réafficher les jardins : exécution du contrat.
+- Générer des recommandations d'entretien : exécution du contrat.
+- Sécurité, prévention des abus, débogage, amélioration : intérêt légitime.
+- Accès caméra/photos/localisation/calendrier/notifications : consentement (iOS).
+- Preuve des consentements : obligation légale / responsabilité.
 
-Sécurité
-- Chiffrement en transit (HTTPS) et bonnes pratiques de sécurité.
-- Accès restreint aux seules personnes habilitées.
-- Sur mobile, protège ton appareil (code, Face/Touch ID).
+4. Destinataires et sous-traitants
+Nous ne vendons jamais vos données et ne les utilisons pas pour la publicité ni
+le suivi entre applications. Prestataires : Google Firebase Authentication
+(auth), Apple (Se connecter avec Apple), MongoDB Atlas (base de données),
+notre serveur API + Cloudflare (hébergement, TLS, CDN), Unsplash (images de
+plantes, aucune donnée personnelle), fournisseur de génération IA (fiches
+d'entretien à partir d'un nom de plante, aucune donnée personnelle), GitHub Pages
+(ce site).
 
-Enfants
-- Arbore ne vise pas les personnes de moins de 13 ans (ou l’âge légal local).
-- Si une collecte inappropriée nous est signalée, nous supprimerons les données concernées.
+5. Transferts internationaux
+Certains prestataires peuvent traiter des données hors UE/EEE (dont les
+États-Unis), encadrés par des garanties appropriées : clauses contractuelles
+types et, le cas échéant, le cadre UE–États-Unis (Data Privacy Framework).
 
-Transferts internationaux
-- Lorsque des données sont traitées hors UE/EEE, nous appliquons des garanties appropriées (clauses types, mesures complémentaires) conformément au RGPD.
+6. Durées de conservation
+- Compte, profil, jardins : tant que le compte existe ; supprimés à la
+  suppression du compte.
+- Consentements : jusqu'à 3 ans après la fin du consentement (recommandation CNIL).
+- Journaux serveur : courte durée, à des fins de sécurité.
 
-Nous contacter
-Pour toute question, demande d’accès ou suppression de données, écris-nous : support@arbore.app.
+7. Vos droits (art. 15 à 22 RGPD)
+- Accès, rectification, effacement, limitation, portabilité, opposition, retrait
+  du consentement à tout moment.
+- En libre-service : modifier le profil, gérer les consentements, supprimer le
+  compte (efface immédiatement compte, jardins et consentements).
+- Exercice des droits : support@arbore.app
+- Réclamation : CNIL (cnil.fr) ou votre autorité de contrôle locale.
 
-Modifications de cette politique
-Nous pouvons mettre à jour cette politique pour refléter l’évolution de nos pratiques. Toute modification importante sera indiquée dans l’app.
+8. Sécurité
+Chiffrement en transit (HTTPS/TLS), accès restreint aux membres autorisés, mots
+de passe gérés par Firebase (jamais stockés par nous). Protégez votre appareil
+(code, Face ID / Touch ID).
+
+9. Mineurs
+Arbore ne s'adresse pas aux moins de 15 ans (13 ans dans certains pays). Nous ne
+collectons pas sciemment leurs données ; toute collecte signalée sera supprimée.
+
+10. Modifications
+Nous pouvons mettre à jour cette politique ; la version et la date figurent en
+haut du document et toute modification importante sera signalée dans l'application.
+Contact : support@arbore.app

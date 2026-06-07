@@ -1,69 +1,74 @@
-Arbore - Conditions générales
-Dernière mise à jour : 11 Nov 2025
+Arbore — Conditions générales d'utilisation
+Dernière mise à jour : 31 mai 2026 — version 2.0
 
-Conditions d’utilisation
-Merci d’utiliser Arbore. Merci de lire attentivement ces Conditions : elles encadrent ton accès à l’app et son utilisation.
+Version en ligne : https://arbore.app/terms (FR / EN)
 
-Acceptation des conditions
-- En créant un compte ou en utilisant Arbore, tu acceptes les présentes Conditions.
-- Si tu n’acceptes pas ces Conditions, tu ne dois pas utiliser l’app.
+Merci d'utiliser Arbore. Les présentes conditions générales d'utilisation (les
+« Conditions ») encadrent votre accès à l'application Arbore et son utilisation.
 
-Description du service
-- Arbore fournit des fonctionnalités liées au jardinage : scans de plantes, recommandations, visualisations, notifications et synchronisation.
-- Certaines fonctionnalités sont payantes et accessibles via des abonnements.
+1. Acceptation des Conditions
+En créant un compte ou en utilisant Arbore, vous acceptez les présentes
+Conditions et notre Politique de confidentialité. À défaut, vous ne devez pas
+utiliser l'application.
 
-Comptes & sécurité
-- Tu es responsable de l’exactitude des informations de ton compte et de la confidentialité de tes identifiants.
-- Préviens-nous immédiatement en cas d’usage non autorisé de ton compte.
+2. Description du service
+Arbore est une application de jardinage en réalité augmentée : choisir des
+plantes et obtenir des recommandations d'entretien, visualiser des plantes en 3D
+et en RA dans votre espace, composer/sauvegarder des « jardins » et les
+réafficher, recevoir des rappels d'arrosage.
+Application gratuite et en bêta : aucun abonnement ni achat intégré n'est proposé.
+Distribuée via Apple TestFlight, elle peut contenir des fonctionnalités
+incomplètes ou instables.
 
-Abonnements & facturation
-- Les achats sont gérés par l’App Store / Play Store ; leurs conditions s’appliquent.
-- Les abonnements se renouvellent automatiquement jusqu’à annulation.
-- Les tarifs peuvent évoluer ; nous t’informerons des changements applicables.
+3. Éligibilité et compte
+- Avoir au moins 15 ans (ou l'âge du consentement numérique applicable).
+- Vous êtes responsable de l'exactitude des informations de votre compte et de la
+  confidentialité de vos identifiants ; prévenez-nous en cas d'usage non autorisé.
 
-Essais gratuits & annulation
-- Les essais gratuits, lorsqu’ils sont proposés, se transforment en abonnement payant à la fin de la période, sauf annulation avant l’échéance.
-- Tu peux annuler ton abonnement à tout moment depuis les réglages de l’App Store / Play Store.
+4. Contenu utilisateur
+- Vous conservez vos droits sur les contenus importés/créés (photo, jardins).
+- Vous nous accordez une licence mondiale, non exclusive et révocable pour
+  héberger, traiter et afficher ce contenu, uniquement afin de fournir le service.
+- Vous garantissez disposer des droits nécessaires.
 
-Contenu utilisateur
-- Tu conserves tes droits sur les photos et contenus que tu importes.
-- Tu nous accordes une licence mondiale, non exclusive et révocable pour héberger, traiter et afficher ce contenu uniquement afin de fournir le service.
-- Tu garantis disposer des droits nécessaires pour partager ces contenus.
+5. Usages interdits
+Ingénierie inverse, contournement des mesures de sécurité, usage frauduleux ou
+illégal ; interférence avec le service, surcharge, collecte automatisée non
+autorisée ; publication de contenus illégaux, offensants, diffamatoires ou
+portant atteinte aux droits d'autrui.
 
-Usages interdits
-- Ingénierie inverse, contournement des mesures de sécurité, usage frauduleux ou illégal.
-- Interférence avec le service, surcharge des serveurs, collecte automatisée non autorisée.
-- Publication de contenus illégaux, offensants, diffamatoires ou portant atteinte aux droits d’autrui.
+6. Disponibilité, bêta et « en l'état »
+Service fourni « en l'état » et « selon disponibilité ». Produit en bêta : il peut
+comporter des erreurs et être modifié, suspendu ou interrompu à tout moment.
+Aucune garantie de disponibilité ininterrompue ni d'absence de perte de données ;
+conservez une copie de tout contenu important.
 
-Propriété intellectuelle
-- Le nom Arbore, son logo, l’app et son contenu (hors contenu utilisateur) sont protégés par des droits de propriété intellectuelle.
-- L’utilisation de l’app ne te confère aucun droit de propriété sur celle-ci.
+7. Propriété intellectuelle
+Le nom Arbore, son logo, l'application et son contenu (hors contenu utilisateur)
+sont protégés ; l'utilisation ne confère aucun droit de propriété sur l'app.
 
-Vie privée
-- Ton utilisation est également régie par notre Politique de confidentialité.
-- Cette politique explique les données collectées, leurs usages et tes droits.
+8. Services tiers et boutiques d'applications
+L'application repose sur des services tiers (Firebase, Apple, MongoDB, Cloudflare,
+Unsplash) décrits dans la Politique de confidentialité ; leurs conditions
+s'appliquent.
+Mention Apple : ces Conditions sont conclues entre vous et l'équipe Arbore, non
+avec Apple ; Apple n'est pas responsable de l'application. À défaut de contrat de
+licence propre, le « Contrat de Licence Type d'Application sous Licence » d'Apple
+s'applique. Apple et ses filiales sont tiers bénéficiaires des présentes.
 
-Services tiers
-- L’app peut intégrer des services tiers (hébergement, analytics, paiements).
-- Nous ne sommes pas responsables des pratiques ou contenus de ces services tiers.
+9. Limitation de responsabilité
+Dans les limites autorisées par la loi, l'équipe Arbore n'est pas responsable des
+dommages indirects, spéciaux, accessoires ou consécutifs, ni des pertes de données
+ou de profits. Vos droits impératifs de consommateur ne sont pas limités.
 
-Disponibilité & modifications
-- Nous pouvons mettre à jour, suspendre ou interrompre tout ou partie du service à tout moment, avec ou sans préavis.
-- Nous ne garantissons pas une disponibilité ininterrompue.
+10. Suppression de compte et résiliation
+Vous pouvez supprimer votre compte à tout moment depuis l'application (efface
+compte, jardins et consentements). Nous pouvons suspendre/résilier l'accès en cas
+de violation des Conditions ou d'usage illicite.
 
-Limitation de responsabilité
-- Dans les limites autorisées par la loi, Arbore ne saurait être responsable des dommages indirects, spéciaux, accessoires ou consécutifs, ni de pertes de données ou de profits.
-- Ton seul recours en cas d’insatisfaction est de cesser d’utiliser l’app et, le cas échéant, d’annuler ton abonnement.
+11. Droit applicable et juridiction
+Droit français, sans préjudice des protections impératives de consommateur de
+votre pays de résidence. Pour les données personnelles : CNIL.
 
-Indemnisation
-- Tu acceptes d’indemniser Arbore pour toute réclamation résultant d’une violation de ces Conditions ou d’un usage illégal de l’app.
-
-Loi applicable & juridiction
-- Ces Conditions sont régies par le droit applicable dans ton pays de résidence si la loi locale l’impose, à défaut par le droit français.
-- Tout litige sera soumis aux tribunaux compétents déterminés par ces règles.
-
-Nous contacter
-Pour toute question ou réclamation liée à ces Conditions, contacte-nous : support@arbore.app.
-
-Mises à jour de ces Conditions
-Nous pouvons modifier ces Conditions pour refléter l’évolution de nos services et de nos obligations légales. Nous t’informerons des changements importants dans l’app.
+Modifications : nous pouvons modifier ces Conditions ; toute modification
+importante sera signalée dans l'application. Contact : support@arbore.app
