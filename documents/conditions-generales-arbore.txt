@@ -1,5 +1,5 @@
 Arbore — Conditions générales d'utilisation
-Dernière mise à jour : 31 mai 2026 — version 2.0
+Dernière mise à jour : 22 juillet 2026 — version 2.1
 
 Version en ligne : https://arbore.app/terms (FR / EN)
 
@@ -16,9 +16,7 @@ Arbore est une application de jardinage en réalité augmentée : choisir des
 plantes et obtenir des recommandations d'entretien, visualiser des plantes en 3D
 et en RA dans votre espace, composer/sauvegarder des « jardins » et les
 réafficher, recevoir des rappels d'arrosage.
-Application gratuite et en bêta : aucun abonnement ni achat intégré n'est proposé.
-Distribuée via Apple TestFlight, elle peut contenir des fonctionnalités
-incomplètes ou instables.
+Application gratuite : aucun abonnement ni achat intégré n'est actuellement proposé.
 
 3. Éligibilité et compte
 - Avoir au moins 15 ans (ou l'âge du consentement numérique applicable).
@@ -37,9 +35,9 @@ illégal ; interférence avec le service, surcharge, collecte automatisée non
 autorisée ; publication de contenus illégaux, offensants, diffamatoires ou
 portant atteinte aux droits d'autrui.
 
-6. Disponibilité, bêta et « en l'état »
-Service fourni « en l'état » et « selon disponibilité ». Produit en bêta : il peut
-comporter des erreurs et être modifié, suspendu ou interrompu à tout moment.
+6. Disponibilité et service « en l'état »
+Service fourni « en l'état » et « selon disponibilité ». Il peut comporter des
+erreurs et être modifié, suspendu ou interrompu à tout moment.
 Aucune garantie de disponibilité ininterrompue ni d'absence de perte de données ;
 conservez une copie de tout contenu important.
 

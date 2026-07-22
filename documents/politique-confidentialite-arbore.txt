@@ -1,5 +1,5 @@
 Arbore — Politique de confidentialité
-Dernière mise à jour : 31 mai 2026 — version 2.0
+Dernière mise à jour : 22 juillet 2026 — version 2.2
 
 Version en ligne : https://arbore.app/privacy (FR / EN)
 
@@ -8,13 +8,13 @@ personnelles nous traitons lorsque vous utilisez l'application Arbore, pourquoi,
 avec quels prestataires, combien de temps nous les conservons et quels droits
 vous avez au titre du RGPD.
 
-Arbore est en bêta : les fonctionnalités et les traitements peuvent évoluer ;
-toute modification importante sera annoncée dans l'application.
+Les traitements décrits correspondent à la version actuelle d'Arbore. Toute
+modification importante sera annoncée dans l'application.
 
 1. Responsable du traitement
-- Arbore est une application éditée par l'équipe Arbore, projet étudiant non
-  commercial développé dans le cadre de la scolarité à Epitech.
-- L'application est gratuite et distribuée en bêta via Apple TestFlight.
+- Arbore est une application éditée par l'équipe Arbore, initialement développée
+  dans le cadre de la scolarité à Epitech.
+- L'application est actuellement gratuite.
 - Contact : support@arbore.app
 
 2. Données que nous traitons
@@ -22,16 +22,19 @@ toute modification importante sera annoncée dans l'application.
   Firebase (UID), date de création, fournisseur de connexion (e-mail/mot de
   passe, Google, ou Se connecter avec Apple), photo de profil si vous en ajoutez une.
 - Contenu de jardin et RA : plantes sélectionnées, positions et disposition 3D,
-  réponses au questionnaire (lumière, arrosage, substrat).
-- Consentements (RGPD) : type, version, date, ainsi qu'une adresse IP et un agent
-  utilisateur conservés comme preuve de consentement.
-- Journaux techniques : journaux serveur standards (IP, horodatage, requête).
+  réponses au questionnaire, ville ou localisation approximative, orientation et
+  informations environnementales associées au jardin.
+- IA : messages et photos envoyés volontairement au chatbot ou au diagnostic.
+- Consentements (RGPD) : type, version, date serveur et informations techniques
+  limitées sur la version de l'application, sans conserver l'adresse IP.
+- Journaux techniques : journaux serveur et d'infrastructure limités. Dans
+  l'application mobile, les rapports Sentry de crash et performance ne sont
+  transmis que si le partage des diagnostics est activé volontairement.
 
-Traité uniquement sur votre appareil, jamais envoyé à nos serveurs : le flux
-caméra et le LiDAR (RA, détection du sol), les capteurs de mouvement, les cartes
-spatiales ARKit (WorldMap) conservées localement pour réafficher un jardin, la
-position approximative (ensoleillement), le calendrier (rappels d'arrosage) et
-Face ID (connexion plus rapide, gérée par iOS — aucune donnée biométrique reçue).
+Traité uniquement sur votre appareil, jamais envoyé à nos serveurs : le flux brut
+caméra et LiDAR, les capteurs de mouvement et les cartes spatiales ARKit
+(WorldMap). Une photo ne quitte l'appareil que si vous la choisissez explicitement
+pour le profil, le chatbot ou le diagnostic.
 
 3. Finalités et bases légales (art. 6 RGPD)
 - Créer/gérer le compte, sauvegarder et réafficher les jardins : exécution du contrat.
@@ -44,10 +47,12 @@ Face ID (connexion plus rapide, gérée par iOS — aucune donnée biométrique 
 Nous ne vendons jamais vos données et ne les utilisons pas pour la publicité ni
 le suivi entre applications. Prestataires : Google Firebase Authentication
 (auth), Apple (Se connecter avec Apple), MongoDB Atlas (base de données),
-notre serveur API + Cloudflare (hébergement, TLS, CDN), Unsplash (images de
-plantes, aucune donnée personnelle), fournisseur de génération IA (fiches
-d'entretien à partir d'un nom de plante, aucune donnée personnelle), GitHub Pages
-(ce site).
+OVHcloud + Cloudflare (hébergement de l'API, TLS, proxy et CDN), Unsplash (images
+de plantes, aucune donnée personnelle), Google Gemini (chat et diagnostic à
+partir des messages et photos envoyés volontairement), Mistral AI ou OpenAI
+(génération de fiches à partir d'un nom de plante, selon la configuration),
+Sentry (diagnostics techniques minimisés ; opt-in dans l'application mobile) et
+GitHub Pages (ce site).
 
 5. Transferts internationaux
 Certains prestataires peuvent traiter des données hors UE/EEE (dont les
@@ -57,14 +62,15 @@ types et, le cas échéant, le cadre UE–États-Unis (Data Privacy Framework).
 6. Durées de conservation
 - Compte, profil, jardins : tant que le compte existe ; supprimés à la
   suppression du compte.
-- Consentements : jusqu'à 3 ans après la fin du consentement (recommandation CNIL).
+- Consentements : tant que le compte existe ; supprimés avec le compte.
 - Journaux serveur : courte durée, à des fins de sécurité.
 
 7. Vos droits (art. 15 à 22 RGPD)
 - Accès, rectification, effacement, limitation, portabilité, opposition, retrait
   du consentement à tout moment.
 - En libre-service : modifier le profil, gérer les consentements, supprimer le
-  compte (efface immédiatement compte, jardins et consentements).
+  compte (efface le compte Firebase, le profil, les jardins, les consentements et
+  les données locales associées).
 - Exercice des droits : support@arbore.app
 - Réclamation : CNIL (cnil.fr) ou votre autorité de contrôle locale.
 
