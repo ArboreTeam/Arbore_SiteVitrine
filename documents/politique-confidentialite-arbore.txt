@@ -1,5 +1,5 @@
 Arbore — Politique de confidentialité
-Dernière mise à jour : 22 juillet 2026 — version 2.2
+Dernière mise à jour : 23 juillet 2026 — version 2.3
 
 Version en ligne : https://arbore.app/privacy (FR / EN)
 
@@ -87,8 +87,14 @@ ne sont jamais stockés par Arbore. L'accès aux systèmes est limité aux membr
 autorisés.
 
 9. Mineurs
-Arbore ne s'adresse pas aux enfants de moins de 15 ans (13 ans dans certains
-pays). Toute collecte inappropriée signalée sera supprimée.
+Arbore n'est pas conçue spécifiquement pour les enfants. Si un utilisateur n'a
+pas atteint l'âge auquel il peut consentir seul au traitement de ses données
+dans son pays, l'autorisation d'un parent ou représentant légal est requise
+avant la création du compte et l'utilisation de l'application. En France, cette
+autorisation est requise avant 15 ans pour les traitements fondés sur le
+consentement. Si nous apprenons qu'un mineur a fourni des données sans
+l'autorisation requise, nous prendrons les mesures nécessaires, notamment leur
+suppression.
 
 10. Modifications
 La version et la date figurent en haut du document. Toute modification

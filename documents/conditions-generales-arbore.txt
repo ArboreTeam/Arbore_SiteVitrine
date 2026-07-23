@@ -1,5 +1,5 @@
 Arbore — Conditions générales d'utilisation
-Dernière mise à jour : 31 mai 2026 — version 2.0
+Dernière mise à jour : 23 juillet 2026 — version 2.1
 
 Version en ligne : https://arbore.app/terms (FR / EN)
 
@@ -21,7 +21,9 @@ Distribuée via Apple TestFlight, elle peut contenir des fonctionnalités
 incomplètes ou instables.
 
 3. Éligibilité et compte
-- Avoir au moins 15 ans (ou l'âge du consentement numérique applicable).
+- Si vous n'avez pas atteint l'âge auquel vous pouvez consentir seul au
+  traitement de vos données dans votre pays, obtenir l'autorisation d'un parent
+  ou représentant légal avant de créer un compte et d'utiliser Arbore.
 - Vous êtes responsable de l'exactitude des informations de votre compte et de la
   confidentialité de vos identifiants ; prévenez-nous en cas d'usage non autorisé.
 
