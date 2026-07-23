@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Arbore</title>
+  <meta name="description" content="Assistance Arbore : obtenir de l'aide, signaler un problème, gérer ou supprimer son compte et consulter les réponses aux questions fréquentes." />
+  <meta name="author" content="Arbore" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#123d2a" />
+  <link rel="canonical" href="https://www.arbore.app/support" />
+
+  <meta property="og:title" content="Support — Arbore" />
+  <meta property="og:site_name" content="Arbore" />
+  <meta property="og:description" content="Besoin d'aide avec Arbore ? Retrouvez les réponses essentielles et contactez le support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.arbore.app/support" />
+
+  <link rel="icon" type="image/png" sizes="48x48" href="https://www.arbore.app/favicon.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="https://www.arbore.app/assets/favicon-48x48.png" />
+  <link rel="shortcut icon" href="https://www.arbore.app/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.arbore.app/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="https://www.arbore.app/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #123d2a;
+      --forest-2: #194d36;
+      --green: #2f8f46;
+      --mint: #c9f4df;
+      --mint-soft: #ecfff5;
+      --cream: #f7f3ec;
+      --paper: #fffdf8;
+      --text: #173326;
+      --muted: #65756d;
+      --line: rgba(18, 61, 42, 0.12);
+      --shadow: 0 24px 70px rgba(18, 61, 42, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .container { width: min(1060px, calc(100% - 40px)); margin: 0 auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 243, 236, 0.84);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--forest);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--forest);
+      object-fit: cover;
+      box-shadow: 0 12px 30px rgba(18, 61, 42, 0.22);
+    }
+    .nav-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .nav-links, .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .nav-links a:hover, .footer-links a:hover { color: var(--forest); }
+    .lang-toggle {
+      display: inline-flex;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+    }
+    .lang-toggle button {
+      border: 0;
+      padding: 8px 14px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+    .lang-toggle button[aria-pressed="true"] { background: var(--forest); color: white; }
+
+    .hero { padding: 70px 0 44px; }
+    .section-label {
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 820px;
+      margin-bottom: 18px;
+      color: var(--forest);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    .hero-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 800;
+    }
+    .button-primary { background: var(--forest); color: white; box-shadow: 0 14px 34px rgba(18, 61, 42, 0.2); }
+    .button-secondary { border: 1px solid var(--line); background: white; color: var(--forest); }
+    .button:hover { transform: translateY(-1px); }
+
+    .support-page { padding: 12px 0 86px; }
+    .support-panel {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow);
+    }
+    .support-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .support-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--paper);
+    }
+    .support-card h2 { margin-bottom: 10px; color: var(--forest); font-size: 1.18rem; }
+    .support-card p, .support-card li { color: var(--muted); font-size: 0.96rem; line-height: 1.68; }
+    .support-card ul { padding-left: 20px; }
+    .support-card a { color: var(--green); font-weight: 800; }
+    .support-card-wide { grid-column: 1 / -1; }
+    .faq { margin-top: 34px; }
+    .faq h2 { margin-bottom: 18px; color: var(--forest); font-size: 1.6rem; letter-spacing: -0.03em; }
+    details {
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary {
+      display: flex;
+      min-height: 66px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      color: var(--forest);
+      font-weight: 800;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--mint-soft);
+      color: var(--green);
+      font-size: 1.25rem;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 820px; padding: 0 46px 22px 0; color: var(--muted); line-height: 1.68; }
+    .contact-card {
+      margin-top: 34px;
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--forest), var(--forest-2));
+      color: white;
+    }
+    .contact-card h2 { margin-bottom: 8px; font-size: 1.35rem; }
+    .contact-card p { max-width: 730px; color: rgba(255, 255, 255, 0.82); line-height: 1.65; }
+    .contact-card .button { margin-top: 18px; background: white; color: var(--forest); }
+
+    footer { padding: 42px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+    html[data-lang="fr"] [lang="en"] { display: none !important; }
+    html[data-lang="en"] [lang="fr"] { display: none !important; }
+
+    @media (max-width: 860px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 16px 0; }
+      .support-panel { padding: 22px; }
+      .support-grid { grid-template-columns: 1fr; }
+      .support-card-wide { grid-column: auto; }
+    }
+  </style>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6eebdc6e74884f5299e6fb8c3ee707c4"}'></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Navigation">
+          <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+          <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+          <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+          <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+        </nav>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="section-label"><span lang="fr">Assistance Arbore</span><span lang="en">Arbore support</span></div>
+        <h1><span lang="fr">Comment pouvons-nous vous aider&nbsp;?</span><span lang="en">How can we help?</span></h1>
+        <p class="hero-copy" lang="fr">
+          Retrouvez les réponses essentielles pour utiliser Arbore, gérer votre compte ou nous signaler un problème.
+          Pour une demande personnelle, notre équipe est joignable directement par e-mail.
+        </p>
+        <p class="hero-copy" lang="en">
+          Find the essential answers for using Arbore, managing your account or reporting an issue.
+          For an individual request, contact our team directly by email.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:support@arbore.app?subject=Demande%20de%20support%20Arbore">
+            <span lang="fr">Écrire au support</span><span lang="en">Email support</span>
+          </a>
+          <a class="button button-secondary" href="#faq">
+            <span lang="fr">Voir les questions fréquentes</span><span lang="en">Read the FAQ</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-page">
+      <div class="container">
+        <div class="support-panel">
+          <div class="support-grid">
+            <article class="support-card">
+              <h2><span lang="fr">Signaler un problème</span><span lang="en">Report an issue</span></h2>
+              <p lang="fr">Pour nous aider à reproduire le problème, indiquez :</p>
+              <p lang="en">To help us reproduce the issue, please include:</p>
+              <ul lang="fr">
+                <li>le modèle de votre iPhone et la version d'iOS ;</li>
+                <li>les étapes réalisées avant le problème ;</li>
+                <li>une capture d'écran si elle ne contient pas de donnée sensible.</li>
+              </ul>
+              <ul lang="en">
+                <li>your iPhone model and iOS version;</li>
+                <li>the steps taken before the issue;</li>
+                <li>a screenshot if it contains no sensitive information.</li>
+              </ul>
+            </article>
+
+            <article class="support-card">
+              <h2><span lang="fr">Compte et connexion</span><span lang="en">Account and sign-in</span></h2>
+              <p lang="fr">
+                Arbore accepte la connexion par e-mail, Google et Apple. Utilisez toujours la même méthode pour
+                retrouver le même compte. Ne transmettez jamais votre mot de passe au support.
+              </p>
+              <p lang="en">
+                Arbore supports email, Google and Apple sign-in. Always use the same method to access the same
+                account. Never send your password to support.
+              </p>
+            </article>
+
+            <article class="support-card">
+              <h2><span lang="fr">Supprimer votre compte</span><span lang="en">Delete your account</span></h2>
+              <p lang="fr">
+                Dans l'app, ouvrez <strong>Profil → Fermer le compte</strong>, confirmez votre identité puis la
+                suppression. Cette action efface le compte et les données associées. Si vous ne pouvez plus vous
+                connecter, écrivez à <a href="mailto:support@arbore.app?subject=Suppression%20de%20compte%20Arbore">support@arbore.app</a>.
+              </p>
+              <p lang="en">
+                In the app, open <strong>Profile → Close account</strong>, confirm your identity, then confirm
+                deletion. This removes the account and associated data. If you can no longer sign in, email
+                <a href="mailto:support@arbore.app?subject=Arbore%20account%20deletion">support@arbore.app</a>.
+              </p>
+            </article>
+
+            <article class="support-card">
+              <h2><span lang="fr">Vie privée et données</span><span lang="en">Privacy and data</span></h2>
+              <p lang="fr">
+                Pour une demande d'accès, de rectification, de portabilité ou d'effacement, contactez-nous depuis
+                l'adresse liée à votre compte. Consultez également notre
+                <a href="privacy.html">politique de confidentialité</a>.
+              </p>
+              <p lang="en">
+                For an access, rectification, portability or erasure request, contact us from the address linked
+                to your account. You can also read our <a href="privacy.html">privacy policy</a>.
+              </p>
+            </article>
+
+            <article class="support-card support-card-wide">
+              <h2><span lang="fr">Caméra, LiDAR et localisation</span><span lang="en">Camera, LiDAR and location</span></h2>
+              <p lang="fr">
+                La caméra est nécessaire pour mesurer un espace et placer des plantes en réalité augmentée.
+                Le LiDAR est utilisé uniquement sur les appareils compatibles. Une localisation approximative
+                suffit pour adapter un jardin ; vous pouvez saisir votre ville manuellement si vous refusez
+                l'autorisation de localisation.
+              </p>
+              <p lang="en">
+                The camera is required to measure a space and place plants in augmented reality. LiDAR is used
+                only on compatible devices. An approximate location is enough to adapt a garden; you can enter
+                your city manually if you decline location access.
+              </p>
+            </article>
+          </div>
+
+          <section class="faq" id="faq">
+            <h2><span lang="fr">Questions fréquentes</span><span lang="en">Frequently asked questions</span></h2>
+
+            <details>
+              <summary><span lang="fr">Pourquoi un modèle 3D met-il du temps à apparaître&nbsp;?</span><span lang="en">Why does a 3D model take time to appear?</span></summary>
+              <p lang="fr">Lors de la première utilisation, Arbore doit télécharger le modèle 3D. Une connexion stable est recommandée. Les ouvertures suivantes utilisent normalement le cache de l'appareil.</p>
+              <p lang="en">On first use, Arbore must download the 3D model. A stable connection is recommended. Later openings normally use the device cache.</p>
+            </details>
+
+            <details>
+              <summary><span lang="fr">Puis-je utiliser Arbore sans partager mon adresse exacte&nbsp;?</span><span lang="en">Can I use Arbore without sharing my exact address?</span></summary>
+              <p lang="fr">Oui. Arbore utilise uniquement une position approximative liée au jardin, ou la ville que vous saisissez manuellement. L'adresse exacte n'est pas demandée.</p>
+              <p lang="en">Yes. Arbore only uses an approximate location linked to the garden, or the city you enter manually. Your exact address is not requested.</p>
+            </details>
+
+            <details>
+              <summary><span lang="fr">Les images de ma caméra sont-elles envoyées&nbsp;?</span><span lang="en">Are my camera images uploaded?</span></summary>
+              <p lang="fr">Le flux caméra, le scan LiDAR et les cartes ARKit restent sur votre appareil. Une photo est envoyée uniquement si vous choisissez de l'ajouter à l'assistant ou au diagnostic de plante.</p>
+              <p lang="en">The camera feed, LiDAR scan and ARKit maps remain on your device. A photo is uploaded only when you choose to add it to the assistant or plant diagnosis.</p>
+            </details>
+
+            <details>
+              <summary><span lang="fr">Arbore propose-t-elle un abonnement&nbsp;?</span><span lang="en">Does Arbore offer a subscription?</span></summary>
+              <p lang="fr">Non. La version actuelle d'Arbore est gratuite et ne propose aucun achat intégré.</p>
+              <p lang="en">No. The current version of Arbore is free and offers no in-app purchases.</p>
+            </details>
+          </section>
+
+          <section class="contact-card">
+            <h2><span lang="fr">Vous n'avez pas trouvé votre réponse&nbsp;?</span><span lang="en">Still need help?</span></h2>
+            <p lang="fr">Écrivez-nous en décrivant votre demande. Pour protéger votre compte, n'envoyez jamais de mot de passe, de clé privée ou de document d'identité non demandé.</p>
+            <p lang="en">Email us with a description of your request. To protect your account, never send a password, private key or unrequested identity document.</p>
+            <a class="button" href="mailto:support@arbore.app?subject=Demande%20de%20support%20Arbore">support@arbore.app</a>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="brand" aria-label="Arbore">
+        <img class="logo-mark" src="assets/arbore_logo.png" alt="" />
+        <span>Arbore</span>
+      </a>
+      <div class="footer-links">
+        <a href="mailto:support@arbore.app">support@arbore.app</a>
+        <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+        <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+        <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('.lang-toggle button');
+
+      function apply(lang) {
+        lang = (lang === 'en') ? 'en' : 'fr';
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang);
+        buttons.forEach(function (button) {
+          button.setAttribute('aria-pressed', button.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        try { localStorage.setItem('arbore-lang', lang); } catch (error) {}
+      }
+
+      var queryLanguage = new URLSearchParams(window.location.search).get('lang');
+      var storedLanguage = null;
+      try { storedLanguage = localStorage.getItem('arbore-lang'); } catch (error) {}
+      var browserLanguage = (navigator.language || 'fr').toLowerCase().indexOf('en') === 0 ? 'en' : 'fr';
+      apply(queryLanguage || storedLanguage || browserLanguage);
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          apply(button.getAttribute('data-set-lang'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
