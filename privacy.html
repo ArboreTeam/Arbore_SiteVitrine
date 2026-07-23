@@ -188,6 +188,7 @@
       <div class="nav-right">
         <nav class="nav-links" aria-label="Navigation">
           <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+          <a href="support.html"><span lang="fr">Support</span><span lang="en">Support</span></a>
           <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
           <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
         </nav>
@@ -218,8 +219,8 @@
           the EU General Data Protection Regulation (GDPR).
         </p>
         <span class="legal-date">
-          <span lang="fr">Dernière mise à jour : 7 juin 2026 — version 2.1</span>
-          <span lang="en">Last updated: 7 June 2026 — version 2.1</span>
+          <span lang="fr">Dernière mise à jour : 22 juillet 2026 — version 2.2</span>
+          <span lang="en">Last updated: 22 July 2026 — version 2.2</span>
         </span>
       </div>
     </section>
@@ -233,25 +234,26 @@
             <h2><span lang="fr">1. Responsable du traitement</span><span lang="en">1. Data controller</span></h2>
             <p lang="fr">
               Arbore est une application mobile éditée par l'équipe Arbore, un projet étudiant développé
-              dans le cadre de la scolarité à Epitech. Le projet n'a pas de finalité commerciale et
-              l'application est, à ce jour, gratuite et distribuée en bêta via Apple TestFlight.
+              dans le cadre de la scolarité à Epitech. L'application est gratuite à ce jour et peut être
+              distribuée via Apple TestFlight ou l'App Store.
               Pour toute question relative à vos données, vous pouvez nous écrire à
               <strong>support@arbore.app</strong>.
             </p>
             <p lang="en">
               Arbore is a mobile app published by the Arbore team, a student project developed as part of
-              coursework at Epitech. The project is non-commercial; the app is, to date, free and distributed
-              as a beta through Apple TestFlight. For any question about your data, contact us at
+              coursework at Epitech. The app is currently free and may be distributed through Apple TestFlight
+              or the App Store. For any question about your data, contact us at
               <strong>support@arbore.app</strong>.
             </p>
             <div class="callout">
               <p lang="fr">
-                <strong>Arbore est en bêta.</strong> Les fonctionnalités et les traitements de données
-                peuvent évoluer ; toute modification importante de cette politique sera annoncée dans l'application.
+                <strong>Version 2.2.</strong> Cette mise à jour décrit la localisation approximative enregistrée
+                pour chaque jardin, l'assistant et le diagnostic Google Gemini, ainsi que les diagnostics
+                techniques Sentry facultatifs.
               </p>
               <p lang="en">
-                <strong>Arbore is in beta.</strong> Features and data processing may evolve; any material change
-                to this policy will be announced inside the app.
+                <strong>Version 2.2.</strong> This update documents the approximate location saved for each garden,
+                the Google Gemini assistant and diagnosis, and optional Sentry technical diagnostics.
               </p>
             </div>
           </div>
@@ -277,11 +279,15 @@
                 <h3><span lang="fr">Contenu de jardin &amp; RA</span><span lang="en">Garden &amp; AR content</span></h3>
                 <ul lang="fr">
                   <li>Plantes sélectionnées, positions et disposition 3D de vos jardins.</li>
-                  <li>Réponses au questionnaire (lumière, arrosage, substrat) servant à générer des recommandations.</li>
+                  <li>Type et dimensions de l'espace, exposition et orientation obtenues pendant le scan.</li>
+                  <li>Ville ou position approximative arrondie, enregistrée séparément pour chaque jardin si vous l'autorisez.</li>
+                  <li>Réponses aux questions environnementales et contraintes de sécurité du foyer (animaux ou jeunes enfants).</li>
                 </ul>
                 <ul lang="en">
                   <li>Selected plants, positions and 3D layout of your gardens.</li>
-                  <li>Questionnaire answers (light, watering, soil) used to generate recommendations.</li>
+                  <li>Space type and dimensions, exposure and orientation captured during scanning.</li>
+                  <li>City or rounded approximate location, saved separately for each garden if you allow it.</li>
+                  <li>Environmental answers and household safety constraints (pets or young children).</li>
                 </ul>
               </section>
               <section class="legal-block">
@@ -296,12 +302,16 @@
                 </ul>
               </section>
               <section class="legal-block">
-                <h3><span lang="fr">Journaux techniques</span><span lang="en">Technical logs</span></h3>
+                <h3><span lang="fr">Assistant, diagnostic et journaux</span><span lang="en">Assistant, diagnosis &amp; logs</span></h3>
                 <ul lang="fr">
+                  <li>Messages et photos que vous choisissez d'envoyer à l'assistant ou au diagnostic de plante.</li>
                   <li>Journaux serveur standards (adresse IP, horodatage, requête) à des fins de sécurité et de débogage.</li>
+                  <li>Si vous activez les diagnostics : rapports de crash et données techniques transmis à Sentry, liés uniquement à votre identifiant Firebase.</li>
                 </ul>
                 <ul lang="en">
+                  <li>Messages and photos you choose to send to the assistant or plant diagnosis.</li>
                   <li>Standard server logs (IP address, timestamp, request) for security and debugging.</li>
+                  <li>If you enable diagnostics: crash reports and technical data sent to Sentry, linked only to your Firebase identifier.</li>
                 </ul>
               </section>
             </div>
@@ -311,17 +321,17 @@
                 <strong>Traité uniquement sur votre appareil, jamais envoyé à nos serveurs :</strong>
                 le flux caméra et le scanner LiDAR (placement en réalité augmentée et détection du sol),
                 les capteurs de mouvement (suivi RA), les cartes spatiales ARKit (WorldMap) conservées
-                localement pour réafficher un jardin, votre position approximative (calcul de l'ensoleillement
-                par rapport à votre fenêtre), l'accès au calendrier (rappels d'arrosage) et Face ID
+                localement pour réafficher un jardin, l'accès au calendrier (rappels d'arrosage) et Face ID
                 (connexion plus rapide, gérée par iOS — nous ne recevons aucune donnée biométrique).
+                Une photo n'est envoyée que si vous l'ajoutez volontairement à l'assistant ou au diagnostic.
               </p>
               <p lang="en">
                 <strong>Processed only on your device, never sent to our servers:</strong>
                 the camera feed and LiDAR scanner (augmented-reality placement and floor detection),
                 motion sensors (AR tracking), the ARKit spatial maps (WorldMap) kept locally to restore a
-                garden, your approximate location (computing sunlight relative to your window), calendar
-                access (watering reminders), and Face ID (faster sign-in, handled by iOS — we never receive
-                any biometric data).
+                garden, calendar access (watering reminders), and Face ID (faster sign-in, handled by iOS —
+                we never receive any biometric data). A photo is uploaded only when you voluntarily add it
+                to the assistant or diagnosis.
               </p>
             </div>
           </div>
@@ -335,8 +345,10 @@
               <thead><tr><th>Finalité</th><th>Base légale</th></tr></thead>
               <tbody>
                 <tr><td><strong>Créer et gérer votre compte</strong>, vous connecter, sauvegarder et réafficher vos jardins</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
-                <tr><td><strong>Générer des recommandations</strong> d'entretien à partir de vos réponses</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+                <tr><td><strong>Adapter les plantes à votre espace</strong> à partir des données du jardin</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+                <tr><td><strong>Répondre à une demande d'assistant ou de diagnostic IA</strong> lorsque vous envoyez un message ou une photo</td><td>Exécution du contrat et consentement pour la photo (art. 6.1.a et b)</td></tr>
                 <tr><td><strong>Sécurité</strong>, prévention des abus, débogage, amélioration du service</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+                <tr><td><strong>Diagnostics techniques Sentry</strong></td><td>Consentement facultatif, désactivé par défaut (art. 6.1.a)</td></tr>
                 <tr><td><strong>Accès caméra, photos, localisation, calendrier, notifications</strong></td><td>Consentement via les autorisations iOS (art. 6.1.a)</td></tr>
                 <tr><td><strong>Conserver la preuve des consentements</strong></td><td>Obligation légale / responsabilité (art. 6.1.c &amp; 7.1)</td></tr>
               </tbody>
@@ -345,8 +357,10 @@
               <thead><tr><th>Purpose</th><th>Legal basis</th></tr></thead>
               <tbody>
                 <tr><td><strong>Create and manage your account</strong>, sign you in, save and restore your gardens</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
-                <tr><td><strong>Generate care recommendations</strong> from your answers</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+                <tr><td><strong>Match plants to your space</strong> using garden data</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+                <tr><td><strong>Answer an AI assistant or diagnosis request</strong> when you submit a message or photo</td><td>Performance of a contract and consent for the photo (Art. 6(1)(a) and (b))</td></tr>
                 <tr><td><strong>Security</strong>, abuse prevention, debugging, service improvement</td><td>Legitimate interests (Art. 6(1)(f))</td></tr>
+                <tr><td><strong>Sentry technical diagnostics</strong></td><td>Optional consent, off by default (Art. 6(1)(a))</td></tr>
                 <tr><td><strong>Camera, photos, location, calendar, notifications access</strong></td><td>Consent via the iOS permission prompts (Art. 6(1)(a))</td></tr>
                 <tr><td><strong>Keeping proof of consent</strong></td><td>Legal obligation / accountability (Art. 6(1)(c) &amp; 7(1))</td></tr>
               </tbody>
@@ -368,11 +382,13 @@
               <thead><tr><th>Prestataire</th><th>Rôle</th></tr></thead>
               <tbody>
                 <tr><td><strong>Google Firebase Authentication</strong></td><td>Authentification et gestion des comptes</td></tr>
+                <tr><td><strong>Google Gemini</strong></td><td>Traitement des messages et photos envoyés à l'assistant ou au diagnostic</td></tr>
                 <tr><td><strong>Apple</strong> (Se connecter avec Apple)</td><td>Authentification, si vous la choisissez</td></tr>
                 <tr><td><strong>MongoDB Atlas</strong></td><td>Hébergement de la base de données (compte, jardins, consentements)</td></tr>
                 <tr><td><strong>Notre serveur API + Cloudflare</strong></td><td>Hébergement et diffusion sécurisée (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Récupération d'images illustratives de plantes (aucune donnée personnelle transmise)</td></tr>
-                <tr><td><strong>Fournisseur de génération IA</strong></td><td>Génération de fiches d'entretien à partir d'un nom de plante (aucune donnée personnelle transmise)</td></tr>
+                <tr><td><strong>Mistral et OpenAI</strong></td><td>Génération interne de fiches botaniques à partir d'un nom de plante ; aucun compte utilisateur ni contenu de jardin n'est transmis</td></tr>
+                <tr><td><strong>Sentry</strong></td><td>Rapports de crash et diagnostics techniques uniquement si vous activez ce partage</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hébergement de ce site web</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Mesure d'audience de ce site web, sans cookie ni traceur (aucune donnée personnelle stockée)</td></tr>
               </tbody>
@@ -381,11 +397,13 @@
               <thead><tr><th>Provider</th><th>Role</th></tr></thead>
               <tbody>
                 <tr><td><strong>Google Firebase Authentication</strong></td><td>Authentication and account management</td></tr>
+                <tr><td><strong>Google Gemini</strong></td><td>Processing messages and photos submitted to the assistant or diagnosis</td></tr>
                 <tr><td><strong>Apple</strong> (Sign in with Apple)</td><td>Authentication, if you choose it</td></tr>
                 <tr><td><strong>MongoDB Atlas</strong></td><td>Database hosting (account, gardens, consents)</td></tr>
                 <tr><td><strong>Our API server + Cloudflare</strong></td><td>Hosting and secure delivery (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Fetching illustrative plant images (no personal data sent)</td></tr>
-                <tr><td><strong>AI generation provider</strong></td><td>Generating plant-care sheets from a plant name (no personal data sent)</td></tr>
+                <tr><td><strong>Mistral and OpenAI</strong></td><td>Internal generation of botanical sheets from a plant name; no user account or garden content is sent</td></tr>
+                <tr><td><strong>Sentry</strong></td><td>Crash reports and technical diagnostics only if you enable this sharing</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hosting this website</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Audience measurement for this website, without cookies or trackers (no personal data stored)</td></tr>
               </tbody>
@@ -413,13 +431,13 @@
           <div class="legal-section">
             <h2><span lang="fr">5. Transferts internationaux</span><span lang="en">5. International transfers</span></h2>
             <p lang="fr">
-              Certains prestataires (Google, Apple, MongoDB, Cloudflare) peuvent traiter des données en dehors
+              Certains prestataires (Google, Apple, MongoDB, Cloudflare, OpenAI, Mistral ou Sentry) peuvent traiter des données en dehors
               de l'Union européenne / EEE, notamment aux États-Unis. Ces transferts sont encadrés par des
               garanties appropriées : clauses contractuelles types de la Commission européenne et, le cas échéant,
               le cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework).
             </p>
             <p lang="en">
-              Some providers (Google, Apple, MongoDB, Cloudflare) may process data outside the EU/EEA, including
+              Some providers (Google, Apple, MongoDB, Cloudflare, OpenAI, Mistral or Sentry) may process data outside the EU/EEA, including
               in the United States. Such transfers are covered by appropriate safeguards: the European Commission's
               Standard Contractual Clauses and, where applicable, the EU–US Data Privacy Framework.
             </p>
@@ -431,11 +449,13 @@
             <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="fr">
               <li><strong>Compte, profil, jardins :</strong> conservés tant que votre compte existe. Ils sont supprimés lorsque vous supprimez votre compte.</li>
               <li><strong>Consentements :</strong> conservés jusqu'à 3 ans après la fin du consentement, comme preuve (recommandation CNIL).</li>
+              <li><strong>Assistant et diagnostic :</strong> Arbore ne conserve pas vos messages ou photos dans sa base de données ; l'historique affiché reste local sur votre appareil.</li>
               <li><strong>Journaux serveur :</strong> conservés sur une courte durée à des fins de sécurité.</li>
             </ul>
             <ul class="legal-block" style="border:none;background:transparent;padding:0" lang="en">
               <li><strong>Account, profile, gardens:</strong> kept while your account exists. Deleted when you delete your account.</li>
               <li><strong>Consents:</strong> kept up to 3 years after the consent ends, as proof (CNIL guidance).</li>
+              <li><strong>Assistant and diagnosis:</strong> Arbore does not keep your messages or photos in its database; the displayed history remains local to your device.</li>
               <li><strong>Server logs:</strong> kept for a short period for security purposes.</li>
             </ul>
           </div>
@@ -457,12 +477,12 @@
                 <ul lang="fr">
                   <li>Modifier votre profil (nom, photo).</li>
                   <li>Gérer vos consentements dans les réglages de confidentialité.</li>
-                  <li><strong>Supprimer votre compte</strong> : la suppression efface immédiatement votre compte, vos jardins et vos consentements.</li>
+                  <li><strong>Supprimer votre compte</strong> : la suppression efface le compte Firebase, le profil, les jardins, les consentements, l'historique local de l'assistant et les anciens contenus partagés associés.</li>
                 </ul>
                 <ul lang="en">
                   <li>Edit your profile (name, picture).</li>
                   <li>Manage your consents in the privacy settings.</li>
-                  <li><strong>Delete your account</strong>: deletion immediately erases your account, gardens and consents.</li>
+                  <li><strong>Delete your account</strong>: deletion erases the Firebase account, profile, gardens, consents, local assistant history and associated legacy shared content.</li>
                 </ul>
               </section>
               <section class="legal-block">
@@ -539,6 +559,7 @@
       </a>
       <div class="footer-links">
         <a href="mailto:support@arbore.app">support@arbore.app</a>
+        <a href="support.html"><span lang="fr">Support</span><span lang="en">Support</span></a>
         <a href="privacy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
         <a href="terms.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
         <a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
