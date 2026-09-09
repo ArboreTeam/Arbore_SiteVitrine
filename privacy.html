@@ -219,8 +219,8 @@
           the EU General Data Protection Regulation (GDPR).
         </p>
         <span class="legal-date">
-          <span lang="fr">Dernière mise à jour : 23 juillet 2026 — version 2.3</span>
-          <span lang="en">Last updated: 23 July 2026 — version 2.3</span>
+          <span lang="fr">Dernière mise à jour : 9 septembre 2026 — version 2.4</span>
+          <span lang="en">Last updated: 9 September 2026 — version 2.4</span>
         </span>
       </div>
     </section>
@@ -305,12 +305,14 @@
                 <ul lang="fr">
                   <li>Messages et photos que vous choisissez d'envoyer à l'assistant ou au diagnostic de plante.</li>
                   <li>Journaux serveur standards (adresse IP, horodatage, requête) à des fins de sécurité et de débogage.</li>
-                  <li>Si vous activez les diagnostics : rapports de crash et données techniques transmis à Sentry, liés uniquement à votre identifiant Firebase.</li>
+                  <li>Rapports de plantage transmis à Sentry, <strong>anonymes par défaut</strong> : pile d'appel, version de l'application et modèle d'appareil, sans aucun identifiant — ni compte, ni identifiant d'installation, ni adresse IP.</li>
+                  <li>Si vous activez « Rattacher les diagnostics à mon compte » : votre identifiant Firebase est ajouté à ces rapports, ainsi que la structure de l'écran affiché et les appels réseau.</li>
                 </ul>
                 <ul lang="en">
                   <li>Messages and photos you choose to send to the assistant or plant diagnosis.</li>
                   <li>Standard server logs (IP address, timestamp, request) for security and debugging.</li>
-                  <li>If you enable diagnostics: crash reports and technical data sent to Sentry, linked only to your Firebase identifier.</li>
+                  <li>Crash reports sent to Sentry, <strong>anonymous by default</strong>: call stack, app version and device model, with no identifier at all — not your account, not an installation identifier, not your IP address.</li>
+                  <li>If you turn on “Link diagnostics to my account”: your Firebase identifier is added to those reports, along with the structure of the displayed screen and network calls.</li>
                 </ul>
               </section>
             </div>
@@ -347,7 +349,8 @@
                 <tr><td><strong>Adapter les plantes à votre espace</strong> à partir des données du jardin</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
                 <tr><td><strong>Répondre à une demande d'assistant ou de diagnostic IA</strong> lorsque vous envoyez un message ou une photo</td><td>Exécution du contrat et consentement pour la photo (art. 6.1.a et b)</td></tr>
                 <tr><td><strong>Sécurité</strong>, prévention des abus, débogage, amélioration du service</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
-                <tr><td><strong>Diagnostics techniques Sentry</strong></td><td>Consentement facultatif, désactivé par défaut (art. 6.1.a)</td></tr>
+                <tr><td><strong>Rapports de plantage anonymes</strong></td><td>Hors champ du RGPD : ces rapports ne permettent pas de vous identifier (considérant 26)</td></tr>
+                <tr><td><strong>Rattacher les diagnostics à votre compte</strong></td><td>Consentement facultatif, désactivé par défaut (art. 6.1.a)</td></tr>
                 <tr><td><strong>Accès caméra, photos, localisation, calendrier, notifications</strong></td><td>Consentement via les autorisations iOS (art. 6.1.a)</td></tr>
                 <tr><td><strong>Conserver la preuve des consentements</strong></td><td>Obligation légale / responsabilité (art. 6.1.c &amp; 7.1)</td></tr>
               </tbody>
@@ -359,7 +362,8 @@
                 <tr><td><strong>Match plants to your space</strong> using garden data</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
                 <tr><td><strong>Answer an AI assistant or diagnosis request</strong> when you submit a message or photo</td><td>Performance of a contract and consent for the photo (Art. 6(1)(a) and (b))</td></tr>
                 <tr><td><strong>Security</strong>, abuse prevention, debugging, service improvement</td><td>Legitimate interests (Art. 6(1)(f))</td></tr>
-                <tr><td><strong>Sentry technical diagnostics</strong></td><td>Optional consent, off by default (Art. 6(1)(a))</td></tr>
+                <tr><td><strong>Anonymous crash reports</strong></td><td>Outside the scope of the GDPR: these reports cannot identify you (recital 26)</td></tr>
+                <tr><td><strong>Linking diagnostics to your account</strong></td><td>Optional consent, off by default (Art. 6(1)(a))</td></tr>
                 <tr><td><strong>Camera, photos, location, calendar, notifications access</strong></td><td>Consent via the iOS permission prompts (Art. 6(1)(a))</td></tr>
                 <tr><td><strong>Keeping proof of consent</strong></td><td>Legal obligation / accountability (Art. 6(1)(c) &amp; 7(1))</td></tr>
               </tbody>
@@ -387,7 +391,7 @@
                 <tr><td><strong>Notre serveur API + Cloudflare</strong></td><td>Hébergement et diffusion sécurisée (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Récupération d'images illustratives de plantes (aucune donnée personnelle transmise)</td></tr>
                 <tr><td><strong>Mistral et OpenAI</strong></td><td>Génération interne de fiches botaniques à partir d'un nom de plante ; aucun compte utilisateur ni contenu de jardin n'est transmis</td></tr>
-                <tr><td><strong>Sentry</strong></td><td>Rapports de crash et diagnostics techniques uniquement si vous activez ce partage</td></tr>
+                <tr><td><strong>Sentry</strong> (résidence UE)</td><td>Rapports de plantage — anonymes par défaut, rattachés à votre compte si vous l'activez</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hébergement de ce site web</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Mesure d'audience de ce site web, sans cookie ni traceur (aucune donnée personnelle stockée)</td></tr>
               </tbody>
@@ -402,7 +406,7 @@
                 <tr><td><strong>Our API server + Cloudflare</strong></td><td>Hosting and secure delivery (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Fetching illustrative plant images (no personal data sent)</td></tr>
                 <tr><td><strong>Mistral and OpenAI</strong></td><td>Internal generation of botanical sheets from a plant name; no user account or garden content is sent</td></tr>
-                <tr><td><strong>Sentry</strong></td><td>Crash reports and technical diagnostics only if you enable this sharing</td></tr>
+                <tr><td><strong>Sentry</strong> (EU residency)</td><td>Crash reports — anonymous by default, linked to your account if you enable it</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hosting this website</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Audience measurement for this website, without cookies or trackers (no personal data stored)</td></tr>
               </tbody>
