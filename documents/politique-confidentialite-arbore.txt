@@ -1,5 +1,5 @@
 Arbore — Politique de confidentialité
-Dernière mise à jour : 23 juillet 2026 — version 2.3
+Dernière mise à jour : 9 septembre 2026 — version 2.4
 
 Version en ligne : https://arbore.app/privacy (FR / EN)
 
@@ -25,8 +25,12 @@ vous avez au titre du RGPD.
   d'envoyer à Google Gemini.
 - Consentements : type, version, date serveur et informations techniques
   limitées conservées comme preuve.
-- Journaux : journaux serveur standards ; rapports de crash et diagnostics
-  Sentry uniquement si l'utilisateur active ce partage.
+- Journaux : journaux serveur standards.
+- Rapports de plantage : transmis à Sentry, anonymes par défaut — pile d'appel,
+  version de l'application et modèle d'appareil, sans aucun identifiant (ni
+  compte, ni identifiant d'installation, ni adresse IP). Si l'utilisateur active
+  « Rattacher les diagnostics à mon compte », son identifiant Firebase y est
+  ajouté, ainsi que la structure de l'écran et les appels réseau.
 
 Restent uniquement sur l'appareil : le flux caméra et LiDAR brut, les capteurs
 de mouvement, les cartes spatiales ARKit (WorldMap), l'accès au calendrier et
@@ -39,8 +43,10 @@ l'utilisateur l'ajoute volontairement à l'assistant ou au diagnostic.
 - Répondre aux demandes d'assistant ou de diagnostic : exécution du contrat et
   consentement lorsque l'utilisateur transmet une photo.
 - Sécurité, prévention des abus et amélioration : intérêt légitime.
-- Caméra, photos, localisation, calendrier, notifications et Sentry facultatif :
-  consentement.
+- Caméra, photos, localisation, calendrier et notifications : consentement.
+- Rapports de plantage anonymes : hors champ du RGPD, ces rapports ne permettant
+  pas d'identifier une personne (considérant 26). Leur rattachement au compte
+  relève, lui, du consentement.
 - Preuve des consentements : obligation légale et responsabilité.
 
 4. Destinataires et sous-traitants
@@ -55,7 +61,8 @@ Prestataires :
 - Unsplash : images illustratives de plantes ;
 - Mistral et OpenAI : génération interne de fiches botaniques à partir d'un nom
   de plante, sans compte utilisateur ni contenu de jardin ;
-- Sentry : diagnostics techniques uniquement après consentement ;
+- Sentry (résidence UE) : rapports de plantage, anonymes par défaut et
+  rattachés au compte si l'utilisateur l'active ;
 - GitHub Pages et Cloudflare Web Analytics : hébergement et mesure agrégée de ce
   site, sans cookie publicitaire.
 
