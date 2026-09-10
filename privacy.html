@@ -219,8 +219,8 @@
           the EU General Data Protection Regulation (GDPR).
         </p>
         <span class="legal-date">
-          <span lang="fr">Dernière mise à jour : 9 septembre 2026 — version 2.4</span>
-          <span lang="en">Last updated: 9 September 2026 — version 2.4</span>
+          <span lang="fr">Dernière mise à jour : 10 septembre 2026 — version 2.5</span>
+          <span lang="en">Last updated: 10 September 2026 — version 2.5</span>
         </span>
       </div>
     </section>
@@ -247,12 +247,15 @@
             </p>
             <div class="callout">
               <p lang="fr">
-                <strong>Version 2.3.</strong> Cette mise à jour précise les conditions d'utilisation par les
-                mineurs et l'autorisation parentale requise sous l'âge local de consentement numérique.
+                <strong>Version 2.5.</strong> Cette mise à jour précise que Sentry déduit une localisation
+                approximative — pays et ville — de la connexion utilisée pour transmettre un rapport de
+                plantage. Notre application ne la transmet jamais : elle est calculée par le prestataire à
+                partir de la connexion elle-même.
               </p>
               <p lang="en">
-                <strong>Version 2.3.</strong> This update clarifies use by minors and the parental permission
-                required below the local age of digital consent.
+                <strong>Version 2.5.</strong> This update clarifies that Sentry derives an approximate
+                location — country and city — from the connection used to send a crash report. Our app never
+                sends it: it is computed by the provider from the connection itself.
               </p>
             </div>
           </div>
@@ -306,12 +309,14 @@
                   <li>Messages et photos que vous choisissez d'envoyer à l'assistant ou au diagnostic de plante.</li>
                   <li>Journaux serveur standards (adresse IP, horodatage, requête) à des fins de sécurité et de débogage.</li>
                   <li>Rapports de plantage transmis à Sentry, <strong>anonymes par défaut</strong> : pile d'appel, version de l'application et modèle d'appareil, sans aucun identifiant — ni compte, ni identifiant d'installation, ni adresse IP.</li>
+                  <li><strong>Localisation approximative déduite par Sentry</strong> : pays et ville, calculés par le prestataire à partir de la connexion qui transmet le rapport. L'application ne l'envoie jamais ; votre adresse IP, elle, n'est pas conservée. Cette déduction a lieu même lorsque le rapport est anonyme.</li>
                   <li>Si vous activez « Rattacher les diagnostics à mon compte » : votre identifiant Firebase est ajouté à ces rapports, ainsi que la structure de l'écran affiché et les appels réseau.</li>
                 </ul>
                 <ul lang="en">
                   <li>Messages and photos you choose to send to the assistant or plant diagnosis.</li>
                   <li>Standard server logs (IP address, timestamp, request) for security and debugging.</li>
                   <li>Crash reports sent to Sentry, <strong>anonymous by default</strong>: call stack, app version and device model, with no identifier at all — not your account, not an installation identifier, not your IP address.</li>
+                  <li><strong>Approximate location derived by Sentry</strong>: country and city, computed by the provider from the connection that sends the report. The app never sends it; your IP address itself is not retained. This derivation happens even when the report is anonymous.</li>
                   <li>If you turn on “Link diagnostics to my account”: your Firebase identifier is added to those reports, along with the structure of the displayed screen and network calls.</li>
                 </ul>
               </section>
@@ -391,7 +396,7 @@
                 <tr><td><strong>Notre serveur API + Cloudflare</strong></td><td>Hébergement et diffusion sécurisée (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Récupération d'images illustratives de plantes (aucune donnée personnelle transmise)</td></tr>
                 <tr><td><strong>Mistral et OpenAI</strong></td><td>Génération interne de fiches botaniques à partir d'un nom de plante ; aucun compte utilisateur ni contenu de jardin n'est transmis</td></tr>
-                <tr><td><strong>Sentry</strong> (résidence UE)</td><td>Rapports de plantage — anonymes par défaut, rattachés à votre compte si vous l'activez</td></tr>
+                <tr><td><strong>Sentry</strong> (résidence UE)</td><td>Rapports de plantage — anonymes par défaut, rattachés à votre compte si vous l'activez. Déduit de la connexion une localisation approximative (pays et ville)</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hébergement de ce site web</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Mesure d'audience de ce site web, sans cookie ni traceur (aucune donnée personnelle stockée)</td></tr>
               </tbody>
@@ -406,7 +411,7 @@
                 <tr><td><strong>Our API server + Cloudflare</strong></td><td>Hosting and secure delivery (TLS, CDN)</td></tr>
                 <tr><td><strong>Unsplash</strong></td><td>Fetching illustrative plant images (no personal data sent)</td></tr>
                 <tr><td><strong>Mistral and OpenAI</strong></td><td>Internal generation of botanical sheets from a plant name; no user account or garden content is sent</td></tr>
-                <tr><td><strong>Sentry</strong> (EU residency)</td><td>Crash reports — anonymous by default, linked to your account if you enable it</td></tr>
+                <tr><td><strong>Sentry</strong> (EU residency)</td><td>Crash reports — anonymous by default, linked to your account if you enable it. Derives an approximate location (country and city) from the connection</td></tr>
                 <tr><td><strong>GitHub Pages</strong></td><td>Hosting this website</td></tr>
                 <tr><td><strong>Cloudflare Web Analytics</strong></td><td>Audience measurement for this website, without cookies or trackers (no personal data stored)</td></tr>
               </tbody>

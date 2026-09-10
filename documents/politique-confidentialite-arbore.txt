@@ -1,5 +1,5 @@
 Arbore — Politique de confidentialité
-Dernière mise à jour : 9 septembre 2026 — version 2.4
+Dernière mise à jour : 10 septembre 2026 — version 2.5
 
 Version en ligne : https://arbore.app/privacy (FR / EN)
 
@@ -31,6 +31,9 @@ vous avez au titre du RGPD.
   compte, ni identifiant d'installation, ni adresse IP). Si l'utilisateur active
   « Rattacher les diagnostics à mon compte », son identifiant Firebase y est
   ajouté, ainsi que la structure de l'écran et les appels réseau.
+- Localisation approximative déduite : Sentry calcule un pays et une ville à
+  partir de la connexion qui transmet le rapport. L'application ne l'envoie
+  jamais ; l'adresse IP, elle, n'est pas conservée. Cette déduction a lieu y compris sur les rapports anonymes.
 
 Restent uniquement sur l'appareil : le flux caméra et LiDAR brut, les capteurs
 de mouvement, les cartes spatiales ARKit (WorldMap), l'accès au calendrier et
@@ -44,9 +47,11 @@ l'utilisateur l'ajoute volontairement à l'assistant ou au diagnostic.
   consentement lorsque l'utilisateur transmet une photo.
 - Sécurité, prévention des abus et amélioration : intérêt légitime.
 - Caméra, photos, localisation, calendrier et notifications : consentement.
-- Rapports de plantage anonymes : hors champ du RGPD, ces rapports ne permettant
-  pas d'identifier une personne (considérant 26). Leur rattachement au compte
-  relève, lui, du consentement.
+- Rapports de plantage anonymes : considérés hors champ du RGPD, ces rapports ne
+  permettant pas d'identifier une personne (considérant 26) — ils ne portent ni
+  compte, ni identifiant d'installation, ni adresse IP, et la localisation
+  déduite reste à l'échelle d'une ville. Leur rattachement au compte relève, lui,
+  du consentement.
 - Preuve des consentements : obligation légale et responsabilité.
 
 4. Destinataires et sous-traitants
@@ -62,7 +67,8 @@ Prestataires :
 - Mistral et OpenAI : génération interne de fiches botaniques à partir d'un nom
   de plante, sans compte utilisateur ni contenu de jardin ;
 - Sentry (résidence UE) : rapports de plantage, anonymes par défaut et
-  rattachés au compte si l'utilisateur l'active ;
+  rattachés au compte si l'utilisateur l'active ; déduit de la connexion une
+  localisation approximative (pays et ville) ;
 - GitHub Pages et Cloudflare Web Analytics : hébergement et mesure agrégée de ce
   site, sans cookie publicitaire.
 
