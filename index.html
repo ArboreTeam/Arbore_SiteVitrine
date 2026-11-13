@@ -605,6 +605,20 @@
       border-radius: 16px;
     }
 
+    .beta-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .qr-code-link.qr-code-link-beta {
+      width: 136px;
+      height: 136px;
+      border-radius: 20px;
+      margin-top: 14px;
+    }
+
     .store-badges {
       display: flex;
       flex-wrap: wrap;
@@ -623,6 +637,13 @@
       gap: 10px;
       font-size: 0.9rem;
       font-weight: 800;
+    }
+
+    .store-badge-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--line);
+      font-weight: 700;
     }
 
     .web-preview {
@@ -1125,18 +1146,21 @@
           <article class="download-card" id="app-mobile">
             <div>
               <div class="section-label">Application mobile</div>
-              <h2>Téléchargez Arbore sur mobile.</h2>
+              <h2>Téléchargez Arbore sur l’App Store.</h2>
               <p class="large-text">
-                Scannez le QR code pour rejoindre la bêta TestFlight.
+                Arbore est disponible gratuitement sur l’App Store, pour iPhone et iPad.
               </p>
-              <a class="qr-code-link" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la bêta TestFlight Arbore">
+              <p class="beta-note">
+                Vous voulez essayer les nouveautés en avance ? Scannez ce QR code pour rejoindre la bêta TestFlight.
+              </p>
+              <a class="qr-code-link qr-code-link-beta" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer" aria-label="Rejoindre la bêta TestFlight d’Arbore">
                 <img class="qr-code-image" src="assets/arbore_testflight_qrcode.png" alt="QR code pour rejoindre la bêta TestFlight Arbore" />
               </a>
             </div>
             <div class="store-badges">
-              <a class="store-badge" href="#" aria-label="Lien App Store à ajouter"> App Store bientôt</a>
-              <a class="store-badge" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer">🧪 Rejoindre TestFlight</a>
-              <a class="store-badge" href="assets/arbore_testflight_qrcode_card.png" download>Télécharger la carte QR</a>
+              <a class="store-badge" href="https://apps.apple.com/fr/app/arbore/id6762100087" target="_blank" rel="noopener noreferrer" aria-label="Télécharger Arbore sur l’App Store"> Télécharger sur l’App Store</a>
+              <a class="store-badge store-badge-ghost" href="https://testflight.apple.com/join/xyUGxhKH" target="_blank" rel="noopener noreferrer" aria-label="Rejoindre la bêta TestFlight d’Arbore">🧪 Bêta TestFlight</a>
+              <a class="store-badge store-badge-ghost" href="assets/arbore_testflight_qrcode_card.png" download>Carte QR de la bêta</a>
             </div>
           </article>
 
@@ -1244,15 +1268,15 @@
         <div class="faq-list">
           <details open>
             <summary>Arbore est-elle gratuite ?</summary>
-            <p>Arbore proposera un accès gratuit pour découvrir le produit. Certaines fonctionnalités avancées pourront être disponibles dans une version premium.</p>
+            <p>Oui. Arbore est gratuite : aucun abonnement ni achat intégré n’est proposé.</p>
           </details>
           <details>
             <summary>L’application est-elle disponible sur mobile ?</summary>
-            <p>Oui, Arbore est pensée pour une utilisation mobile. Le lien de téléchargement sera ajouté dès que l’application sera disponible.</p>
+            <p>Oui. Arbore est disponible gratuitement sur l’App Store, pour iPhone et iPad. La bêta TestFlight reste ouverte pour celles et ceux qui veulent tester les versions en avance.</p>
           </details>
           <details>
             <summary>Puis-je utiliser Arbore depuis le web ?</summary>
-            <p>Oui, une plateforme web permettra de retrouver son espace, gérer ses jardins et consulter ses recommandations.</p>
+            <p>Oui. La plateforme web permet de retrouver son espace, gérer ses jardins et consulter ses recommandations.</p>
           </details>
           <details>
             <summary>Arbore fonctionne-t-elle pour les plantes d’intérieur ?</summary>
